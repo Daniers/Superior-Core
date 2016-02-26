@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="Shortcut Icon" type="image/ico" href="imgs/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+	<title>Airy Photography Theme</title>
+  
+	<!-- CSS _____________________________________________-->
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/icomoon.css" media="screen" />
+	<link rel="stylesheet" href="css/magnificpopup.css" media="screen" />
+	<link rel="stylesheet" href="style.css" media="screen" /> 
+
+	<!-- Fixing Internet Explorer ______________________________________-->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<link rel="stylesheet" href="css/ie.css" />
+	<![endif]-->
+
+</head>
+<body class="">
+	<!-- Loader _______________________________-->
+	<div class="loadreveal"></div>
+	<div id="loadscreen"><div id="loader"><span></span></div></div>
+
+	<!-- HEADER _____________________________________________-->
+	<header role="banner" id="header">
+			
+		<div class="wrapper">
+
+			<!-- Logo __-->
+			<h1 id="logo">
+				<a href="index.html" rel="home" id="logo-svg-animated"> 
+					<img src="imgs/logo.png" alt="logo" />
+				</a>
+			</h1>
+		
+			<!-- Main menu __-->
+			<nav id="mainmenu" role="navigation">
+			
+				<div id="menu-burger"><i class="icon-menu"></i></div>
+				<div id="searchicon">
+					<i class="icon-search"></i>
+					<form action="/" method="get" id="searchbar">
+						<fieldset>
+							<input type="text" name="s" id="searchbar-input" value="" />
+							<button type="submit" id="searchbar-submit"></button>
+						</fieldset>
+					</form>				
+				</div>
+				<div id="menu">
+					<ul>
+						<li class="menu-item-has-children"><a href="#">Home</a>
+							<ul class="sub-menu">
+								<li><a href="index.html">Fullscreen Image</a></li>
+								<li><a href="gallery-fullscreen.html">Fullscreen Gallery</a></li>
+								<li><a href="gallery-fullscreen-kenburns.html">Fullscreen KenBurns</a></li>
+								<li><a href="gallery-fullscreen-video.html">Fullscreen Video</a></li>
+							</ul>
+						</li>
+						<li class="current_page_parent menu-item-has-children"><a href="#">Galleries</a>
+							<ul class="sub-menu">
+								<li><a href="gallery-masonry.html">Masonry Grid Gallery</a></li>
+								<li><a href="gallery-horizontal.html">Horizontal Gallery</a></li>
+								<li><a href="gallery-vertical.html">Vertical Gallery</a></li>
+								<li><a href="gallery-fullscreen.html">Fullscreen Gallery</a></li>
+								<li><a href="before-after.html">Before &amp; After</a></li>
+								<li><a href="photo-story.html">Photo Story</a></li>
+								<li><a href="password-protected.html">Password Protected</a></li>
+								<li><a href="gallery-archive.html">Gallery Albums</a></li>
+							</ul>
+						</li>
+						<li class="menu-item-has-children"><a href="#">Pages</a>
+							<ul class="sub-menu">
+								<li><a href="about.html">About</a></li>
+								<li><a href="pricing.html">Pricing</a></li>
+								<li><a href="elements.html">Typography & Elements</a></li>
+								<li><a href="404.html">404 Page</a></li>
+							</ul>
+						</li>
+						<li><a href="docs.html">Docs</a></li>
+						<li><a href="blog.html">Journal</a>
+</li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div> <!-- END .wrapper -->
+		
+	</header>
+
+	
+	
+	<!-- MAIN CONTENT SECTION  _____________________________________________-->
+	<section id="content" role="main">
+		<div class="wrapper">
+	
+			<h2>Masonry Grid Gallery</h2>
+
+			<nav id="gallery-filter">
+				<ul>
+					<li><a href="javascript:void(0)" data-filter="*" class="active">All</a></li>
+					<li><a href='javascript:void(0)' data-filter='.landscapes'>Landscapes</a></li>
+					<li><a href='javascript:void(0)' data-filter='.architecture'>Architecture</a></li>
+					<li><a href='javascript:void(0)' data-filter='.people'>People</a></li>
+					<li><a href='javascript:void(0)' data-filter='.blackwhite'>Black & White</a></li>
+					<li><a href='javascript:void(0)' data-filter='.commercial'>Commercial</a></li>
+				</ul>
+			</nav>
+
+			<nav id="grid-changer">
+				<ul>
+					<li class="col-3"><a href="javascript:void(0)" class="active">
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+							<rect width="10" height="10" x="8"   y="8" />
+						</svg>
+					</a></li>
+					<li class="col-5"><a href="javascript:void(0)">
+						<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+							<rect width="7" height="7" x="6"   y="6" />
+							<rect width="7" height="7" x="14" y="6" />
+							<rect width="7" height="7" x="6" y="14" />
+							<rect width="7" height="7" x="14" y="14" />
+						</svg>
+					</a></li>
+				</ul>
+			</nav>
+			
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+				
+				<figure class="gallery-item landscapes">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/landscape01-600x400.jpg" class="popup"><img src="imgs/photography/landscape01-600x400.jpg"alt="" /></a>
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>Caption of This Beauty</h3>
+							<p>Description of an image</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+				<figure class="gallery-item landscapes">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/landscape02-600x400.jpg" class="popup"><img src="imgs/photography/landscape02-600x400.jpg"alt="" /></a>
+					</header>
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>Caption of This Beauty</h3>
+							<p>Description of an image</p>
+						</div>
+					</figcaption>
+				</figure>				
+
+				<figure class="gallery-item landscapes">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/landscape03-600x400.jpg" class="popup"><img src="imgs/photography/landscape03-600x400.jpg"alt="" /></a>
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>Caption of This Beauty</h3>
+							<p>Description of an image</p>
+						</div>
+					</figcaption>
+				</figure>
+
+				<figure class="gallery-item landscapes">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/landscape04-600x400.jpg" class="popup"><img src="imgs/photography/landscape04-600x400.jpg"alt="" /></a>
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>Caption of This Beauty</h3>
+							<p>Description of an image</p>
+						</div>
+					</figcaption>
+				</figure>
+			
+				<figure class="gallery-item landscapes">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/landscape05-600x366.jpg" class="popup"><img src="imgs/photography/landscape05-600x366.jpg"alt="" /></a>
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>Caption of This Beauty</h3>
+							<p>Description of an image</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+				<figure class="gallery-item landscapes">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/landscape06-600x400.jpg" class="popup"><img src="imgs/photography/landscape06-600x400.jpg"alt="" /></a>
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>Caption of This Beauty</h3>
+							<p>Description of an image</p>
+						</div>
+					</figcaption>
+				</figure>
+
+				<figure class="gallery-item landscapes">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/landscape07-600x400.jpg" class="popup"><img src="imgs/photography/landscape07-600x400.jpg"alt="" /></a>
+					</header>
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>Caption of This Beauty</h3>
+							<p>Description of an image</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+				<figure class="gallery-item landscapes">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/landscape08-600x300.jpg" class="popup"><img src="imgs/photography/landscape08-600x300.jpg"alt="" /></a>
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>Caption of This Beauty</h3>
+							<p>Description of an image</p>
+						</div>
+					</figcaption>
+				</figure>
+
+				<figure class="gallery-item landscapes">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/landscape09-600x400.jpg" class="popup"><img src="imgs/photography/landscape09-600x400.jpg"alt="" /></a>
+					</header>
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>Caption of This Beauty</h3>
+							<p>Description of an image</p>
+						</div>
+					</figcaption>
+				</figure>
+
+				<figure class="gallery-item landscapes">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/landscape10-600x400.jpg" class="popup"><img src="imgs/photography/landscape10-600x400.jpg"alt="" /></a>
+					</header>
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>Caption of This Beauty</h3>
+							<p>Description of an image</p>
+						</div>
+					</figcaption>
+				</figure>
+				
+				<figure class="gallery-item landscapes">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/landscape11-600x400.jpg" class="popup"><img src="imgs/photography/landscape11-600x400.jpg"alt="" /></a>
+					</header>
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>Caption of This Beauty</h3>
+							<p>Description of an image</p>
+						</div>
+					</figcaption>
+				</figure>
+
+				<figure class="gallery-item landscapes">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/landscape12-600x400.jpg" class="popup"><img src="imgs/photography/landscape12-600x400.jpg"alt="" /></a>
+					</header>
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>Caption of This Beauty</h3>
+							<p>Description of an image</p>
+						</div>
+					</figcaption>
+				</figure>
+
+				<figure class="gallery-item landscapes">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/landscape13-600x400.jpg" class="popup"><img src="imgs/photography/landscape13-600x400.jpg"alt="" /></a>
+					</header>
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>Caption of This Beauty</h3>
+							<p>Description of an image</p>
+						</div>
+					</figcaption>
+				</figure>
+
+				<figure class="gallery-item landscapes">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/landscape14-600x400.jpg" class="popup"><img src="imgs/photography/landscape14-600x400.jpg"alt="" /></a>
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>Caption of This Beauty</h3>
+							<p>Description of an image</p>
+						</div>
+					</figcaption>
+				</figure>
+
+				<figure class="gallery-item landscapes">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/landscape15-600x400.jpg" class="popup"><img src="imgs/photography/landscape15-600x400.jpg"alt="" /></a>
+					</header>
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>Caption of This Beauty</h3>
+							<p>Description of an image</p>
+						</div>
+					</figcaption>
+				</figure>
+
+				<figure class="gallery-item architecture">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/architecture01-600x400.jpg" class="popup"><img src="imgs/photography/architecture01-600x400.jpg"alt="" /></a>
+					</header>
+				</figure>
+				
+				<figure class="gallery-item architecture">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/architecture02-600x400.jpg" class="popup"><img src="imgs/photography/architecture02-600x400.jpg"alt="" /></a>
+					</header>
+				</figure>
+				
+				<figure class="gallery-item architecture">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/architecture03-600x400.jpg" class="popup"><img src="imgs/photography/architecture03-600x400.jpg"alt="" /></a>
+					</header>
+				</figure>
+				
+				<figure class="gallery-item architecture commercial">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/architecture04-600x400.jpg" class="popup"><img src="imgs/photography/architecture04-600x400.jpg"alt="" /></a>
+					</header>
+				</figure>
+				
+				<figure class="gallery-item architecture commercial">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/architecture05-600x400.jpg" class="popup"><img src="imgs/photography/architecture05-600x400.jpg"alt="" /></a>
+					</header>
+				</figure>
+				
+				<figure class="gallery-item architecture commercial">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/architecture06-600x400.jpg" class="popup"><img src="imgs/photography/architecture06-600x400.jpg"alt="" /></a>
+					</header>
+				</figure>
+				
+				<figure class="gallery-item architecture commercial">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/architecture07-600x400.jpg" class="popup"><img src="imgs/photography/architecture07-600x400.jpg"alt="" /></a>
+					</header>
+				</figure>
+				
+				<figure class="gallery-item architecture commercial">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/architecture08-600x400.jpg" class="popup"><img src="imgs/photography/architecture08-600x400.jpg"alt="" /></a>
+					</header>
+				</figure>
+				
+				<figure class="gallery-item architecture commercial">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/architecture09-600x338.jpg.jpg" class="popup"><img src="imgs/photography/architecture09-600x338.jpg"alt="" /></a>
+					</header>
+				</figure>
+				
+				<figure class="gallery-item blackwhite">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/blacknwhite01-600x400.jpg" class="popup"><img src="imgs/photography/blacknwhite01-600x400.jpg"alt="" /></a>
+					</header>
+				</figure>
+				
+				<figure class="gallery-item blackwhite">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/blacknwhite02-600x450.jpg" class="popup"><img src="imgs/photography/blacknwhite02-600x450.jpg"alt="" /></a>
+					</header>
+				</figure>
+				<figure class="gallery-item blackwhite">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/blacknwhite03-600x400.jpg" class="popup"><img src="imgs/photography/blacknwhite03-600x400.jpg"alt="" /></a>
+					</header>
+				</figure>
+				<figure class="gallery-item blackwhite people">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/blacknwhite04-600x400.jpg" class="popup"><img src="imgs/photography/blacknwhite04-600x400.jpg"alt="" /></a>
+					</header>
+				</figure>
+				<figure class="gallery-item blackwhite people">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/blacknwhite05-600x766.jpg" class="popup"><img src="imgs/photography/blacknwhite05-600x766.jpg"alt="" /></a>
+					</header>
+				</figure>
+				<figure class="gallery-item blackwhite people">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/blacknwhite06-600x400.jpg" class="popup"><img src="imgs/photography/blacknwhite06-600x400.jpg"alt="" /></a>
+					</header>
+				</figure>
+				<figure class="gallery-item blackwhite people">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/blacknwhite07-600x400.jpg" class="popup"><img src="imgs/photography/blacknwhite07-600x400.jpg"alt="" /></a>
+					</header>
+				</figure>
+				<figure class="gallery-item blackwhite people">
+					<header class='gallery-icon'>
+						<a href="imgs/photography/blacknwhite08-600x310.jpg" class="popup"><img src="imgs/photography/blacknwhite08-600x310.jpg"alt="" /></a>
+					</header>
+				</figure>
+			</div>
+			
+			
+
+		</div><!-- END .wrapper -->
+	</section>
+
+	
+	<footer id="footer" role="contentinfo">
+		<div class="entry-social">
+			<p><a href="javascript:void(0)" class="button" id="votelikebutton">&hearts; Like</a>  128 Likes <span class="sharers">Share: &nbsp;<a href="#">Facebook</a> <a href="#">Twitter</a> <a href="#">Google+</a></span></p>
+		</div>
+
+		<p class="back-to-top"><a href="#header">Back to top ↑</a></p>
+		<p class="copyright">Airy Theme &copy; 2016</p>
+		<ul class="social-icons">
+			<li><a href="#" target="_blank" title="Flickr"><i class="icon-flickr"></i></a></li>
+			<li><a href="#" target="_blank" title="Facebook"><i class="icon-facebook"></i></a></li>
+			<li><a href="#" target="_blank" title="Twitter"><i class="icon-twitter"></i></a></li>								
+		</ul>	
+	</footer>
+
+<!-- Javascripts ______________________________________-->
+<script src="js/jquery.min.js"></script> 
+<script src="js/retina.min.js"></script> 
+<!-- include Masonry -->
+<script src="js/isotope.pkgd.min.js"></script> 
+<!-- include image popups -->
+<script src="js/jquery.magnific-popup.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="js/scripts.js"></script>
+
+</body>
+</html>

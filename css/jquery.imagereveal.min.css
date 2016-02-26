@@ -1,0 +1,8 @@
+.before-after img{display:none}
+.imageReveal-overlay,.imageReveal-background{position:absolute;top:0;left:0;z-index:0}
+.imageReveal-overlay{z-index:1000;overflow:hidden}
+.imageReveal-drag{position:absolute;top:0;right:0;z-index:1001;background-color:#fff;cursor:ew-resize;cursor:grab;cursor:-moz-grab;cursor:-webkit-grab}
+.imageReveal-drag:hover{cursor:ew-resize;cursor:grab;cursor:-moz-grab;cursor:-webkit-grab}
+.imageReveal-drag.dragging:hover{cursor:ew-resize;cursor:grabbing;cursor:-moz-grabbing;cursor:-webkit-grabbing}
+.imageReveal-caption{position:absolute;top:20px;right:20px;z-index:1002;background-color:white;text-align:center;padding:5px 10px;}
+.imageReveal-drag:after{ content: "⟷"; font-size: 1.8em; text-align: center; width: 60px; height: 60px; color: #fff; display: block; position: absolute; left: -28px; top: 48%; z-index: 1002; }
