@@ -48,36 +48,6 @@ def get_credentials():
         print('Storing credentials to ' + credential_path)
     return credentials
 
-def main():
-    """Shows basic usage of the Gmail API.
-
-    Creates a Gmail API service object and outputs a list of label names
-    of the user's Gmail account.
-    """
-    credentials = get_credentials()
-    http = credentials.authorize(httplib2.Http())
-    service = discovery.build('gmail', 'v1', http=http)
-
-    results = service.users().labels().list(userId='me').execute()
-    labels = results.get('labels', [])
-
-    '''
-    if not labels:
-        print('No labels found.')
-    else:
-      print('Labels:')
-      for label in labels:
-        print(label['name'])
-    '''
-
-    emisor = 'ejecutivoclientes@gafasworld.com.co'
-    mensajes = ListMessagesMatchingQuery(service, 'me', 'from:'+emisor)
-
-    print ("Emails de: ", emisor)
-    print ("Total: ", len(mensajes))
-    print ("Lista: ")
-    for msg in mensajes:
-        print (msg)
 
 def ListMessagesMatchingQuery(service, user_id, query=''):
     """List all Messages of the user's mailbox matching the query.
@@ -111,6 +81,25 @@ def ListMessagesMatchingQuery(service, user_id, query=''):
     except errors.HttpError as error:
         print ('An error occurred: %s' % error)
 
+
+def main():
+    """Shows basic usage of the Gmail API.
+
+    Creates a Gmail API service object and outputs a list of label names
+    of the user's Gmail account.
+    """
+    credentials = get_credentials()
+    http = credentials.authorize(httplib2.Http())
+    service = discovery.build('gmail', 'v1', http=http)
+
+    emisor = 'ejecutivoclientes@gafasworld.com.co'
+    mensajes = ListMessagesMatchingQuery(service, 'me', 'from:'+emisor)
+
+    print ("Emails de: ", emisor)
+    print ("Total: ", len(mensajes))
+    print ("Lista: ")
+    for msg in mensajes:
+        print (msg)
 
 if __name__ == '__main__':
     main()
