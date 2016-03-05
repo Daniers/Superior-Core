@@ -1,0 +1,17 @@
+<script>
+jQuery(window).load(function() {
+jQuery("#gmap").gMap({
+scrollwheel: false,
+zoom: 14,
+markers:[{
+address: "Vía Unillanos,Apiay, Villavicencio, Meta,Colombia",
+icon: {
+image: "imgs/mapmarker.png", iconsize: [48,48], iconanchor: [48,48]
+}
+}],
+controls: {
+panControl: true, zoomControl: true, mapTypeControl: false, scaleControl: true, streetViewControl: false, overviewMapControl: false
+},
+});
+});
+</script>
