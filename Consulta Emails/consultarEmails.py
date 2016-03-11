@@ -92,7 +92,7 @@ def main():
     http = credentials.authorize(httplib2.Http())
     service = discovery.build('gmail', 'v1', http=http)
 
-    emisor = 'ejecutivoclientes@gafasworld.com.co'
+    emisor = 'juan.rey.reina@unillanos.edu.co'
     mensajes = ListMessagesMatchingQuery(service, 'me', 'from:'+emisor)
 
     print ("Emails de: ", emisor)
