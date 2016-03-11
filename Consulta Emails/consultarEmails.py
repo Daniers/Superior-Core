@@ -3,6 +3,7 @@
 from __future__ import print_function
 import httplib2
 import os
+#from datetime import datetime, date, time, deltatime
 
 from apiclient import discovery, errors
 import oauth2client
@@ -18,6 +19,7 @@ except ImportError:
 SCOPES = 'https://www.googleapis.com/auth/gmail.readonly'
 CLIENT_SECRET_FILE = 'client_secret.json'
 APPLICATION_NAME = 'Gmail API Python Quickstart'
+EMISOR = 'juan.rey.reina@unillanos.edu.co'
 
 
 def get_credentials():
@@ -82,24 +84,84 @@ def ListMessagesMatchingQuery(service, user_id, query=''):
         print ('An error occurred: %s' % error)
 
 
-def main():
-    """Shows basic usage of the Gmail API.
-
-    Creates a Gmail API service object and outputs a list of label names
-    of the user's Gmail account.
+def consultarRecibidos(emisor=''):
     """
+        Consulta el # total de mensajes recibidos de un mismo emisor.
+
+        Args:
+            emisor: email de la persona que envía el correo.
+        Returns:
+            Retorna un número entero, de la cantidad de correos recibidos.
+    """
+
     credentials = get_credentials()
     http = credentials.authorize(httplib2.Http())
     service = discovery.build('gmail', 'v1', http=http)
 
-    emisor = 'juan.rey.reina@unillanos.edu.co'
-    mensajes = ListMessagesMatchingQuery(service, 'me', 'from:'+emisor)
+    mensajes = ListMessagesMatchingQuery(service, 'me', 'from:' + emisor)
 
-    print ("Emails de: ", emisor)
-    print ("Total: ", len(mensajes))
-    print ("Lista: ")
-    for msg in mensajes:
-        print (msg)
+    return len(mensajes)
+
+
+def consultarEnviados(destinatario=''): #issue 21
+    """
+        Consulta el # total de mensajes enviados a un destinatario especifico.
+
+        Args:
+            receptor: dirección de correo del destinatario
+
+        Returns:
+            Retorna un número entero, de la cantidad de correos enviados.
+    """
+
+    credentials = get_credentials()
+    http = credentials.authorize(httplib2.Http())
+    service = discovery.build('gmail', 'v1', http=http)
+
+    mensajes = ListMessagesMatchingQuery(service, 'me', 'in:sent ' + destinatario)
+
+    return len(mensajes)
+
+
+def consultarEnviadosFecha(fechaIni, fechaFin,destinatario=''):
+    """
+        Consulta el # total de mensajes enviados a un destinatario especifico,
+        dado un rango de fecha especifico
+
+        Args:
+            receptor: dirección de correo del destinatario
+            fechaIni: Fecha inicial de busqueda emails enviados
+            fechaFin: Fecha final de busqueda emails enviados.
+
+        Returns:
+            Retorna un número entero, de la cantidad de correos enviados.
+    """
+
+    credentials = get_credentials()
+    http = credentials.authorize(httplib2.Http())
+    service = discovery.build('gmail', 'v1', http=http)
+
+    mensajes = ListMessagesMatchingQuery(service, 'me', 'in:sent after: ' +
+                    fechaIni + ' before: ' + fechaFin + ' ' + destinatario)
+
+    return len(mensajes)
+
+
+# Función Principal
+def main():
+    print ('Receptor: bayrondanilo92@gmail.com')
+    print ('Emisor: ', EMISOR)
+    print ('Total Recibidos: ', consultarRecibidos(EMISOR))
+
+    print ('\nDestinatario: ', EMISOR)
+    print ('Total Enviados: ', consultarEnviados(EMISOR))
+
+    fechaIni = '2016/03/01'
+    fechaFin = '2016/03/12'
+    print ('\nDestinatario', EMISOR)
+    print ('Entre las Fechas %s y %s' % (fechaIni, fechaFin))
+    print ('Total Enviados: ', consultarEnviadosFecha(fechaIni, fechaFin, EMISOR))
+
 
 if __name__ == '__main__':
     main()
