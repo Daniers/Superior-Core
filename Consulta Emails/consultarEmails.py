@@ -17,9 +17,13 @@ except ImportError:
     flags = None
 
 SCOPES = 'https://www.googleapis.com/auth/gmail.readonly'
-CLIENT_SECRET_FILE = 'client_secret.json'
-APPLICATION_NAME = 'Gmail API Python Quickstart'
-EMISOR = 'juan.rey.reina@unillanos.edu.co'
+#CLIENT_SECRET_FILE = 'client_secret.json'
+CLIENT_SECRET_FILE = 'client_id.json'
+#APPLICATION_NAME = 'Gmail API Python Quickstart'
+APPLICATION_NAME = 'SuperiorCore'
+#EMISOR = 'juan.rey.reina@unillanos.edu.co'
+#EMISOR = 'bayrondanilo92@gmail.com'
+EMISOR = 'alexus142@gmail.com'
 
 
 def get_credentials():
@@ -36,7 +40,7 @@ def get_credentials():
     if not os.path.exists(credential_dir):
         os.makedirs(credential_dir)
     credential_path = os.path.join(credential_dir,
-                                   'gmail-python-quickstart.json')
+                                   'usuario.json')
 
     store = oauth2client.file.Storage(credential_path)
     credentials = store.get()
@@ -123,7 +127,7 @@ def consultarEnviados(destinatario=''): #issue 21
     return len(mensajes)
 
 
-def consultarEnviadosFecha(fechaIni, fechaFin,destinatario=''):
+def consultarEnviadosFecha(fechaIni, fechaFin, destinatario=''):
     """
         Consulta el # total de mensajes enviados a un destinatario especifico,
         dado un rango de fecha especifico
@@ -149,19 +153,21 @@ def consultarEnviadosFecha(fechaIni, fechaFin,destinatario=''):
 
 # Función Principal
 def main():
-    print ('Receptor: bayrondanilo92@gmail.com')
+
+    print ('Receptor: bayron.ortiz@unillanos.edu.co')
     print ('Emisor: ', EMISOR)
     print ('Total Recibidos: ', consultarRecibidos(EMISOR))
 
+    """
     print ('\nDestinatario: ', EMISOR)
     print ('Total Enviados: ', consultarEnviados(EMISOR))
 
-    fechaIni = '2016/03/01'
-    fechaFin = '2016/03/12'
+    fechaIni = '2016/03/13'
+    fechaFin = '2016/03/14'
     print ('\nDestinatario', EMISOR)
     print ('Entre las Fechas %s y %s' % (fechaIni, fechaFin))
     print ('Total Enviados: ', consultarEnviadosFecha(fechaIni, fechaFin, EMISOR))
-
+    """
 
 if __name__ == '__main__':
     main()
