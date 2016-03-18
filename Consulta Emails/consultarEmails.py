@@ -2,21 +2,14 @@
 
 from __future__ import print_function
 import httplib2
-import os
 #from datetime import datetime, date, time, deltatime
+import webbrowser
 
 from apiclient import discovery, errors
-import oauth2client
 from oauth2client import client
-from oauth2client import tools
 
-try:
-    import argparse
-    flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
-except ImportError:
-    flags = None
 
-SCOPES = 'https://www.googleapis.com/auth/gmail.readonly'
+SCOPE = 'https://www.googleapis.com/auth/gmail.readonly'
 #CLIENT_SECRET_FILE = 'client_secret.json'
 CLIENT_SECRET_FILE = 'client_id.json'
 #APPLICATION_NAME = 'Gmail API Python Quickstart'
@@ -25,16 +18,16 @@ APPLICATION_NAME = 'SuperiorCore'
 #EMISOR = 'bayrondanilo92@gmail.com'
 EMISOR = 'alexus142@gmail.com'
 
-
+"""
 def get_credentials():
-    """Gets valid user credentials from storage.
+    #Gets valid user credentials from storage.
 
     If nothing has been stored, or if the stored credentials are invalid,
     the OAuth2 flow is completed to obtain the new credentials.
 
     Returns:
         Credentials, the obtained credential.
-    """
+    #
     home_dir = os.path.expanduser('~')
     credential_dir = os.path.join(home_dir, '.credentials')
     if not os.path.exists(credential_dir):
@@ -52,6 +45,25 @@ def get_credentials():
         else: # Needed only for compatibility with Python 2.6
             credentials = tools.run(flow, store)
         print('Storing credentials to ' + credential_path)
+    return credentials
+"""
+
+def get_credentials():
+    """ Obtiene las credenciales de un usuario que se loggea en la
+        aplicación.
+
+        Return:
+            Credenciales
+    """
+    flow = client.flow_from_clientsecrets(CLIENT_SECRET_FILE, SCOPE,
+          redirect_uri='urn:ietf:wg:oauth:2.0:oob')
+
+    auth_uri = flow.step1_get_authorize_url()
+    webbrowser.open(auth_uri)
+
+    auth_code = input('Ingrese Código Auntenticación: ')
+    credentials = flow.step2_exchange(auth_code)
+
     return credentials
 
 
@@ -154,9 +166,9 @@ def consultarEnviadosFecha(fechaIni, fechaFin, destinatario=''):
 # Función Principal
 def main():
 
-    print ('Receptor: bayron.ortiz@unillanos.edu.co')
+    print ('Receptor:')
     print ('Emisor: ', EMISOR)
-    print ('Total Recibidos: ', consultarRecibidos(EMISOR))
+    print ('Total Recibidos: ', consultarRecibidos(''))
 
     """
     print ('\nDestinatario: ', EMISOR)
