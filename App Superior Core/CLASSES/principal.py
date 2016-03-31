@@ -19,4 +19,6 @@ class Principal(QtGui.QMainWindow):
         self.gmail_service = permisos
         results= self.gmail_service.users().getProfile(userId='me').execute()
         user = results.get('emailAddress',[])
-        self.principal.lb_usuario.setText("Este es un Ejemplo\nUsuario: "+user)
+        total_msg = results.get("messagesTotal",[])
+        self.principal.lb_usuario.setText(user)
+        self.principal.lb_total.setText(str(total_msg))
