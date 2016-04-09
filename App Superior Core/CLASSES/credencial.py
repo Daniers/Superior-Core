@@ -10,7 +10,20 @@ CLIENT_SECRET_FILE = 'CLASSES/client_id.json'   # Archivo de autorización
 SCOPE = 'https://www.googleapis.com/auth/gmail.readonly'    #Tipo de acceso
 
 class Credencial():
+    """
+        Esta clase permite la obtención de las credenciales necesarias para
+        obtener el acceso a los datos de la cuenta del usuario. Si existe una
+        cuenta activa solicita los permisos, de lo contrario direcciona al
+        usuario para que se auntentique en un navegador.
 
+        Args:
+            void : Esta clase no recibe argumentos.
+
+        Attributes:
+            flow : Flujo de sesión, que toma los permisos de la app y el
+                   alcance de acceso de solo lectura.
+            auth_uri : URL de solicitud de acceso mediante Google Auth 2.0
+    """
     def __init__(self):
         super(Credencial, self).__init__()
         self.flow = client.flow_from_clientsecrets(CLIENT_SECRET_FILE, SCOPE,
@@ -21,20 +34,22 @@ class Credencial():
 
     def obtener_permisos(self, auth_code):
         """
-            obtener_permisos, permite el acceso a la cuenta de gmail, solicitando
-            al usuario los permisos necesarios.
+            Permite el acceso a la cuenta de gmail del usuario, al comprobar el
+            código de verificación recibido, luego de conceder los permisos.
 
             Args:
-                auth_code : código de autorización devuelto por gmail
+                auth_code (string): Código de autorización.
 
             Returns:
-                gmail_service : servicio de acceso a gmail
-                1 : significa que no se obtuvo el permiso de acceso
+                gmail_service (Gmail API Service Object): Servicio de acceso
+                a gmail, si auth_code es válido.
+
+                bool: False, significa que no se obtuvo el permiso de acceso.
         """
         try:
             credentials = self.flow.step2_exchange(auth_code)
             http_auth = credentials.authorize(httplib2.Http())
             gmail_service = discovery.build('gmail', 'v1', http_auth)
             return gmail_service    # Retorna el servicio de acceso a la cuenta
-        except:
-            return 1
+        except client.FlowExchangeError:
+            return False
