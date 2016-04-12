@@ -1,0 +1,9 @@
+/****************
+Microsoft, please, just STOP developing any kind of browsers. FOREVER
+--------------------------------------------------------- */
+#loadscreen, .loadreveal { display: none; }
+#logo img { display: inline-block; }
+body.fullscreen #content, body.fullscreen .featured-image-header, .fullscreen-gallery.gallery { height: 100%; }
+.featured-image-header { height: 400px; }
+.horizontal-gallery.gallery { height: 400px; }
+.vertical-gallery.gallery { height: 800px; } 

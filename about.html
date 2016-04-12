@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	
+	<link rel="Shortcut Icon" type="image/ico" href="imgs/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+	<title>Superior Core Theme</title>
+  
+	<!-- CSS _____________________________________________-->
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="css/icomoon.css" media="screen" />
+	<link rel="stylesheet" href="css/magnificpopup.css" media="screen" />
+	<link rel="stylesheet" href="css/columns.min.css" media="screen" />
+	<link rel="stylesheet" href="style.css" media="screen" />  
+
+	<!-- Fixing Internet Explorer ______________________________________-->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<link rel="stylesheet" href="css/ie.css" />
+	<![endif]-->
+
+</head>
+<body class="post">
+
+	<!-- Loader _______________________________-->
+	<div class="loadreveal"></div>
+	<div id="loadscreen"><div id="loader"><span></span></div></div>
+
+	<!-- HEADER _____________________________________________-->
+	<header role="banner" id="header">
+			
+		<div class="wrapper">
+
+			<!-- Logo __-->
+			<h1 id="logo">
+				<a href="index.html" rel="home" id="logo-svg-animated"> 
+					<img src="imgs/logo.png" alt="logo" />
+				</a>
+			</h1>
+		
+			<!-- Main menu __-->
+			<nav id="mainmenu" role="navigation">
+			
+				<div id="menu-burger"><i class="icon-menu"></i></div>
+				<div id="searchicon">
+					<i class="icon-search"></i>
+					<form action="/" method="get" id="searchbar">
+						<fieldset>
+							<input type="text" name="s" id="searchbar-input" value="" />
+							<button type="submit" id="searchbar-submit"></button>
+						</fieldset>
+					</form>				
+				</div>
+				<div id="menu">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="404.html">Groups</a></li>
+						<li><a href="404.html">Graph</a></li>
+						<li><a href="docs.html">About us</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div> <!-- END .wrapper -->
+		
+	</header>
+
+	
+	
+	<!-- MAIN CONTENT SECTION  _____________________________________________-->
+	<section id="content" role="main">
+
+		<div class="featured-image-header">
+			<div id="fullscrean">
+				<img src="imgs/photography/fullscreen01.jpg" alt="" />
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<!-- WYSIWYG starts here __-->
+			<h2>Docs</h2>
+
+			<p>Welcome to the Group Work documentation. This page is designed to evaluate the work done by a working team in order to upgrade its efficiency, effectiveness, and coordination , providing tracking tools emails and evaluation of interaction</p>
+
+			<div class="column-grid column-grid-3">
+				<div class="column column-span-1 column-push-0 column-first">
+					<p><span class="small">Table of Contents</span></p>
+				</div>
+				<div class="column column-span-2 column-push-0 column-last">
+					<ol>
+						<li><a href="#01">Get Started - Introduction</a></li>
+						<li><a href="#02">Creating Your Logo</a></li>
+						<li><a href="#03">Creating a Page with Columns and Images</a></li>
+						<li><a href="#04">Setting up a Gallery</a></li>
+						<li><a href="#05">Setting up Your Homepage</a></li>
+						<li><a href="#06">Blog Page Styles</a></li>
+						<li><a href="#07">Contact Page - Contact Form and Google Map</a></li>
+						<li><a href="#08">Custom Color Scheme</a></li>
+					</ol>
+				</div>
+			</div>
+			
+			<hr />
+
+			<div class="column-grid column-grid-3">
+				<div class="column column-span-1 column-push-0 column-first">
+					<h2 id="01" class="big no-margin">#01</h2>
+					<h3><strong class="small">Get Started</strong></h3>
+					<br />
+					<h4 class="small grey">Introduction, CSS classes, File Structure, Javascripts</h4>
+				</div>
+				<div class="column column-span-2 column-push-0 column-last">
+					<p>This template is very easy to use, it has comments all over its files and clearly visible and understandable element structure. First, keep the copy of the template in a folder and copy the whole folder to your server or test folder on your computer. Make sure the index.html file is in the root of your server. This template uses <strong>PHP for a contact form</strong>, so make sure that your server has PHP installed and enabled for you. Other than that, it is pure HTML / CSS / Javascript. 
+					</p>
+					<h5>Common CSS classes</h5>
+					<p>Airy uses many css classes that you can re-use to create a perfect page.</p>
+					<p>For example:</p>
+					<ul>
+						<li>Use <strong class="green">.big</strong>, <strong class="green">.extrabig</strong>, <strong class="green">.small</strong> or <strong class="green">.extrasmall</strong>   class if you want bigger or smaller text.</li>
+						<li>Use <strong class="green">.justifyright</strong> to align the text to right.</li>
+						<li>Use <strong class="green">.alignright</strong> to right-float an element.</li>
+						<li>Use <strong class="green">.aligncenter</strong> for an image or other element to be centered.</li>
+						<li>Use <strong class="green">.smaller-padding</strong> or <strong class="green">.smaller-margin</strong> on elements if you want them to take less space underneath.</li>
+						<li>Use <strong class="green">.no-padding</strong> or <strong class="green">.no-margin</strong> on elements to take almost no space underneath.</li>
+						<li>Use <strong class="green">.divider</strong> class on <strong>hr</strong> element for extra space.</li>
+						<li>Use <strong class="green">.button</strong> class on <strong>a</strong> element to create a button.</li>
+						<li>Use <strong class="green">.blue</strong> class (or other color name) on an element to change its color or background color.</li>
+						<li>Use <strong class="green">.circle-image</strong> class on a wrapper div around <strong>img</strong> to have a circled image.</li>
+						<li>Use <strong class="green">.colorful-content-box</strong> class on a wrapper div to create a nice box.</li>
+						<li>...etc</li>
+					</ul>
+					<p class="notice success"><strong>Tip:</strong> See <strong>editor-style.css</strong> in the css folder for common classes to use on elements.</p>
+					<br />
+
+					<h5>File structure</h5>
+					<p>Every .html file is in the root folder of the template. Javascript files are in the <strong>js</strong> folder, images in the <strong>imgs</strong> folder. Contact form files reside in the <strong>contact</strong> folder. Main css files (style.css and editor-style.css) are in the root folder. Plugin-related CSS files are in the <strong>css</strong> folder.</p>
+					
+					<h5>Javascripts</h5>
+					<p>In each .html file, we only load jQuery (or the google map javascript files) in &lt;head&gt;. All other scripts are loaded before the closing body tag. This is best practice. File <strong>script.js</strong> must always be loaded last.</p>
+					
+				</div>
+			</div>
+
+			<hr class="divider" />
+			<hr />
+
+			<!-- 02 -->
+			<div class="column-grid column-grid-3">
+				<div class="column column-span-1 column-push-0 column-first">
+					<h2 id="02" class="big no-margin">#02</h2>
+					<h3><strong class="small">Creating Your Logo</strong></h3>
+					<br />
+					<h4 class="small grey">Photoshop, SVG animation, Logo size</h4>
+				</div>
+				<div class="column column-span-2 column-push-0 column-last">
+					<p>Your logo should be created in vector shapes. You can create it in Photoshop, Illustrator, Inkscape, or any other software that can produce a vector shape and export it to PNG. Your logo can be any size, the demo logo size is 64x64px.</p>
+					<h5>Static logo (classic)</h5>
+					<p>You have to create to logos - black and white one. Export your logo to PNG format and save to <em>imgs</em> folder. Logo file name should be <strong>logo.png</strong>. This logo is dark (has black lines - demo logo color is #222222). Change the logo color to white and export as <strong>logo-white.png</strong>.</p>
+					<p class="notice"><strong>Dark logo</strong> is used on pages without image background, the classic pages.</p>
+					<p class="notice"><strong>White logo</strong> is used on pages with image background, the fullscreen pages.</p>
+					<p>For <strong>retina displays</strong>, add the "@2x" suffix to the filename and create a PNG file two times that big (logo@2x.png, logo-white@2x.png).</p>
+					<h5>SVG logo</h5>
+					<p>With a wide browser adoption of SVG you can now have your logo in a vector shape. Export your logo shape (whatever color) into one SVG file. You can export it from Illustrator or export it from Photoshop using some SVG export plugin like SVG Hero or create the shape in Inkscape. You don't have to create larger files for retina displays, SVG can endlessly stretch without quality loss.</p>
+					<p class="smaller-padding">Change the logo HTML element in each html file to:</p>
+					<pre class="language-html">
+&lt;h1 id="logo"&gt;
+	&lt;a href="/" rel="home"&gt;
+		&lt;svg xmlns="http://www.w3.org/2000/svg" width="XXX" height="YYY" viewBox="0 0 XXX YYY"&gt;
+			... PATHS ...
+		&lt;/svg&gt;
+	&lt;/a&gt;
+&lt;/h1&gt;
+					</pre>
+					<p class="smaller-padding">The logo needs two colors of course, dark and white for normal and fullscreen pages:</p>
+					<pre class="language-css">
+#logo svg path { fill: #222; }
+body.fullscreen #logo svg path { fill: white; }
+					</pre>
+					<h5>Animated logo</h5>
+					<p class="smaller-padding">To create an animation, you first have to have your vector logo in an SVG format. Add the logo to all html files:</p>
+					<pre class="language-html">
+&lt;h1 id="logo"&gt;
+	&lt;a href="/" rel="home" id="logo-svg-animated"&gt &lt;/a&gt;
+&lt;/h1&gt;
+					</pre>
+					<p>Note the addition of <strong>logo-svg-animated</strong> id. </p>
+					<p class="smaller-padding">Include the <a href="http://lazylinepainter.info/" target="_blank">Lazy Line Painter</a> plugin before the closing body tag:</p>
+					<pre class="language-html">
+&lt;script src="js/jquery.lazylinepainter.min.js"&gt;&lt;/script&gt;
+					</pre>
+					<p class="smaller-padding">Use the instruction on their site and their converting tool to create your animation javascript that you will copy to the <em>js/script.js</em> file (locate and replace:)</p>
+					<pre class="language-javascript">
+var $svg_logo = jQuery('#logo-svg-animated');
+if ( $svg_logo.length > 0 ) {
+	var pathObj = {
+	    "logo-svg-animated": {
+			... PUT THE STROKES HERE ...
+		}
+	}; 
+	 
+	jQuery(window).load( function() {
+		$('#logo-svg-animated').lazylinepainter({
+		    "svgData": pathObj,
+		    "strokeWidth": 3		// ADJUST TO YOUR LIKINGS
+		}).lazylinepainter('paint'); 
+	});
+}
+					</pre>
+				</div>
+			</div>
+
+			<hr class="divider" />
+			<hr />
+
+			<!-- 03 -->
+			<div class="column-grid column-grid-3">
+				<div class="column column-span-1 column-push-0 column-first">
+					<h2 id="03" class="big no-margin">#03</h2>
+					<h3><strong class="small">Creating a Page with Columns and Images</strong></h3>
+					<br />
+					<h4 class="small grey">HTML elements: Columns, Images, Captions, Team Members, Icons</h4>
+				</div>
+				<div class="column column-span-2 column-push-0 column-last">
+					<p>So we've got a page and want to fill it up with content. How to do it in a nice way? Our pages are full-width and a content stretching accross all that space would look too wide. Let's use some columns to break it up and ensure good readability!</p>
+					<h5>Columns HTML</h5>
+					<p class="smaller-padding">It's easy to create various columns widths, we just need a wrapper that will hold the column divs (in this case a 3-column grid):</p>
+					<pre class="language-html">
+&lt;div class="column-grid column-grid-3"&gt;
+	COLUMNS HERE
+&lt;/div&gt;
+					</pre>
+					<p class="smaller-padding">Let's put 3 columns inside:</p>
+					<pre class="language-html">
+&lt;div class="column-grid column-grid-3"&gt;
+	&lt;div class="column column-span-1 column-first"&gt;
+		COLUMN 1 CONTENT
+	&lt;/div&gt;
+
+	&lt;div class="column column-span-1"&gt;
+		COLUMN 2 CONTENT
+	&lt;/div&gt;
+
+	&lt;div class="column column-span-1 column-last"&gt;
+		COLUMN 3 CONTENT
+	&lt;/div&gt;
+&lt;/div&gt;
+					</pre>
+					<p class="smaller-padding">If we want one column to span a little wider, we would do:</p>
+					<pre class="language-html">
+&lt;div class="column-grid column-grid-3"&gt;
+	&lt;div class="column column-span-1 column-first"&gt;
+		COLUMN 1 CONTENT
+	&lt;/div&gt;
+
+	&lt;div class="column column-span-2 column-last"&gt;
+		COLUMN THAT SPANS 2x WIDER
+	&lt;/div&gt;
+&lt;/div&gt;
+					</pre>
+					<p>And that's the way this documentation page is done too!</p>
+					<p>The CSS styling of columns is controlled from <strong>columns.min.css</strong> file in <em>css</em> folder. The original can be found at <a href="https://github.com/justintadlock/grid-columns/tree/master/css" target="_blank">https://github.com/justintadlock/grid-columns/tree/master/css</a>, WordPress Grid Columns plugin by Justin Tadlock.</p>
+			
+					<h5>Images</h5>
+					<p class="smaller-padding">Every page can a have a "featured image" stretching accross the page on the top, below the menu. To add such image, write just outside the .wrapper element:</p>
+					<pre class="language-html">
+&lt;div class="featured-image-header"&gt;
+	&lt;img src="imgs/image.jpg" alt="" /&gt;
+&lt;/div&gt;
+					</pre>
+					<p class="smaller-padding">To add a simple image, floated left, right, centered or spanning accross the page, just do:</p>
+					<pre class="language-html">
+&lt;img src="imgs/image.jpg" alt="" class="alignleft" /&gt;
+&lt;img src="imgs/image.jpg" alt="" class="alignright" /&gt;
+&lt;img src="imgs/image.jpg" alt="" class="aligncenter" /&gt;
+&lt;img src="imgs/image.jpg" alt="" class="alignnone size-full" /&gt;
+					</pre>
+
+					<p class="smaller-padding">To add right-aligned caption below, you can do:</p>
+					<pre class="language-html">
+&lt;img src="imgs/image.jpg" alt="" /&gt;
+&lt;p class="small justifyright"&gt;&lt;em&gt;A caption.&lt;/em&gt;&lt;/p&gt;
+					</pre>
+
+					<p class="smaller-padding">To add an image with a link to a page or larger image and hovered caption, do:</p>
+					<pre class="language-html">
+&lt;figure class="image-with-caption"&gt;
+	&lt;a href="imgs/large-image.jpg" class="popup"&gt;&lt;img src="imgs/image.jpg" alt="" /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;
+		&lt;h3&gt;Caption of an image&lt;/h3&gt;
+		&lt;p&gt;Description of an image&lt;/p&gt;
+	&lt;/figcaption&gt;
+&lt;/figure&gt;
+					</pre>
+					<p class="notice success">For a lightbox popup effect, always add the <strong>popup</strong> class to a link.</p>
+					<p class="smaller-padding">Always include the magnific popup script before the ending body tag for popups to function:</p>
+					<pre class="language-html">
+&lt;script src="js/jquery.magnific-popup.min.js"&gt;&lt;/script&gt; 
+					</pre>
+
+					<br />
+					<h5>Team Members</h5>
+					<p class="smaller-padding">The team members boxes on the demo's about page are a combination of columns and captioned images. Let's do the the columns first:</p>
+					<pre class="language-html">
+&lt;div class="column-grid column-grid-3"&gt;
+	&lt;div class="column column-span-1 column-first"&gt;
+		TEAM MEMBER 1
+	&lt;/div&gt;
+
+	&lt;div class="column column-span-1"&gt;
+		TEAM MEMBER 2
+	&lt;/div&gt;
+
+	&lt;div class="column column-span-1 column-last"&gt;
+		TEAM MEMBER 3
+	&lt;/div&gt;
+&lt;/div&gt;
+					</pre>
+					<p class="smaller-padding">Into each of these columns, let's add a captioned image:</p>
+					<pre class="language-html">
+&lt;div class="column column-span-1"&gt;
+	&lt;figure class="image-with-caption"&gt;
+		&lt;img src="imgs/image.jpg" alt="" /&gt;
+		&lt;figcaption&gt;
+			&lt;h2&gt;&lt;strong&gt;NAME&lt;/strong&gt;&lt;/h2&gt;
+			&lt;h5&gt;POSITION&lt;/h5&gt;
+			&lt;p&gt;TEXT&lt;/p&gt;
+			&lt;p&gt;&lt;a href="#" class="button"&gt;&lt;i class="icon-bubble"&gt;&lt;/i&gt; &nbsp; Email&lt;/a&gt;&lt;/p&gt;
+		&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+					</pre>
+
+					<br />
+					<h5>Icons</h5>
+					<p>Let's look at the <a href="elements.html">Typography &amp; Elements</a> page of the demo. You can see all available icon set codes displayed there. To add an icon to a HTML page, do:</p>
+					<pre class="language-html">
+&lt;i class="icon-CODE"&gt;&lt;/i&gt;
+					</pre>
+					<p>To create your own icon set, go to <a href="https://icomoon.io/app/#/select" target="_blank">https://icomoon.io/app/#/select</a> and select your desired icons. After selection, Generate the font (bottom right button) and copy the font files to the <em>css/fonts</em> folder of the template. The generated style.css now has to be renamed to <strong>icomoon.css</strong> and copied to the <em>css</em> folder of the template. Now you can use your new icons!</p>
+				</div>
+			</div>
+
+			<hr class="divider" />
+			<hr />
+
+			<!-- 04 -->
+			<div class="column-grid column-grid-3">
+				<div class="column column-span-1 column-push-0 column-first">
+					<h2 id="04" class="big no-margin">#04</h2>
+					<h3><strong class="small">Setting up a Gallery</strong></h3>
+					<br />
+					<h4 class="small grey"></h4>
+				</div>
+				<div class="column column-span-2 column-push-0 column-last">
+					<p class="smaller-padding">All galleries, whether it's a masonry gallery or a horizontal gallery, have the same HTML basis:</p>
+					<pre class="language-html">
+&lt;div class="gallery TYPE-gallery"&gt;
+	&lt;figure class="gallery-item"&gt;
+		HEADER WITH IMAGE
+		&lt;figcaption class='gallery-caption'&gt;
+			CAPTION
+		&lt;/figcaption&gt;
+	&lt;/figure&gt;
+	...
+&lt;/div&gt;
+					</pre>
+					<p>There are various gallery types available, just change the TYPE keywod in the gallery wrapper class:</p>
+					<ul>
+						<li>Masonry: masonry-gallery</li>
+						<li>Horizontal: horizontal-gallery</li>
+						<li>Vertical: vertical-gallery</li>
+						<li>Fullscreen: fullscreen-gallery</li>
+						<li>Fullscreen KenBurns: fullscreen-gallery kenburns-gallery (both classes)</li>
+					</ul>
+					<p class="smaller-padding">And now for the real code:</p>
+					<pre class="language-html">
+&lt;div class="gallery masonry-gallery"&gt;
+	&lt;figure class="gallery-item"&gt;
+		&lt;header class='gallery-icon'&gt;
+			&lt;a href="imgs/large-image.jpg" class="popup"&gt;&lt;img src="imgs/image.jpg" alt="" /&gt;&lt;/a&gt;
+		&lt;/header&gt;
+		&lt;figcaption class='gallery-caption'&gt;
+			&lt;div class="entry-summary"&gt;
+				&lt;h3&gt;Caption of an image&lt;/h3&gt;
+				&lt;p&gt;Description of an image&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/figcaption&gt;
+	&lt;/figure&gt;
+	...
+&lt;/div&gt;
+					</pre>
+					<br />					
+
+					<h5>Masonry Gallery</h5>
+					<p class="smaller-padding">First make sure you included the isotope script before the ending body tag:</p>
+					<pre class="language-html">
+&lt;script src="js/isotope.pkgd.min.js"&gt;&lt;/script&gt; 
+					</pre>
+					<p class="smaller-padding">Masonry Gallery has 3 columns by default. If you want to change the number of columns, change the <strong>col-X</strong> class of the gallery-item:</p>
+					<pre class="language-html">
+&lt;figure class="gallery-item col-4"&gt;
+					</pre>					
+					<p class="smaller-padding">To add a filter to the top of a gallery, add:</p>
+					<pre class="language-html">
+&lt;nav id="gallery-filter"&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href="javascript:void(0)" data-filter="*" class="active"&gt;All&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href='javascript:void(0)' data-filter='.category1'&gt;Cat 1&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href='javascript:void(0)' data-filter='.category2'&gt;Cat 2&lt;/a&gt;&lt;/li&gt;
+		...
+	&lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;nav id="gallery-grid-changer"&gt;
+	&lt;ul&gt;
+		&lt;li class="col-3"&gt;&lt;a href="javascript:void(0)" class="active"&gt;ICON&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="col-5"&gt;&lt;a href="javascript:void(0)"&gt;ICON&lt;/a>&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+					</pre>
+					<p class="smaller-padding">Don't forget to add a category class to each gallery-item you want filterable:</p>
+					<pre class="language-html">
+&lt;figure class="gallery-item col-4 category1"&gt;
+					</pre>		
+					<br />
+	
+					<h5>Horizontal Gallery</h5>
+					<p>Add a .horizontal-gallery class to the gallery wrapper. This gallery is a custom gallery, which means you can find its javascript functions in the template's <strong>scripts.js</strong> file. </p>
+					<p class="smaller-padding">Make sure there is a <strong>mousewheel</strong> script loaded before the closing body tag, so that the gallery can be controlled with user's mouse. </p>
+					<pre class="language-html">
+&lt;script src="js/jquery.mousewheel.min.js"&gt;&lt;/script&gt; 
+					</pre>
+
+					<br />
+	
+					<h5>Vertical Gallery</h5>
+					<p>Add a .vertical-gallery class to the gallery wrapper. This gallery is a custom gallery, which means you can find its javascript functions in the template's <strong>scripts.js</strong> file. </p>
+					<p class="smaller-padding">Make sure there is a <strong>cycle</strong> and <strong>mousewheel</strong> script loaded before the closing body tag.</p>
+					<pre class="language-html">
+&lt;script src="js/jquery.mousewheel.min.js"&gt;&lt;/script&gt; 
+&lt;script src="js/jquery.cycle.min.js"&gt;&lt;/script&gt; 
+					</pre>
+					
+					<br />
+	
+					<h5>Fullscreen Gallery</h5>
+					<p>Add a .fullscreen-gallery class to the gallery wrapper. This gallery is a custom gallery, which means you can find its javascript functions in the template's <strong>scripts.js</strong> file. </p>
+					<p class="notice info">Add a <strong>.fullscreen</strong> class to the &lt;body&gt; so the page covers browser's screen.</p>
+					<p class="notice success">Use your white logo on a fullscreen page for contrast.</p>
+					<p class="notice info">On fullscreen pages, copyright info is replaced with gallery navigation.</p>
+					<p class="smaller-padding">Make sure there is a <strong>cycle</strong> script loaded before the closing body tag.</p>
+					<pre class="language-html">
+&lt;script src="js/jquery.cycle.min.js"&gt;&lt;/script&gt; 
+					</pre>
+					<p class="smaller-padding">The thumbnails for this gallery are generated automatically at the bottom of the page. If you want to remove them, hide them with CSS: If you want to control the size of the thumbs, adjust the height:</p>
+					<pre class="language-css">
+#gallerythumbs { display: none; }
+#gallerythumbs { height: 70px; }
+					</pre>
+					<p class="smaller-padding">Caption to each image is shown at the bottom. If you want a permanent text over the gallery, wrap it in the <strong>.position-absolute</strong> class:</p>
+					<pre class="language-html">
+&lt;div class="position-absolute"&gt;
+	TEXT OVER GALLERY
+&lt;/div&gt;
+
+&lt;div class="gallery fullscreen-gallery"&gt;
+	GALLERY
+&lt;/div&gt;
+					</pre>
+
+					<br />
+	
+					<h5>Fullscreen KenBurns Gallery</h5>
+					<p class="smaller-padding">Add a .fullscreen-gallery and .kenburns-gallery class to the gallery wrapper. Also there needs to be an extra canvas element inside the gallery:</p>
+					<pre class="language-html">
+&lt;div class="gallery fullscreen-gallery kenburns-gallery"&gt;
+
+	&lt;canvas id="kenburns"&gt;&lt;/canva&gt;
+
+	&lt;figure class="gallery-item"&gt;
+	...
+					</pre>
+			
+					<p>This gallery is a custom gallery, which means you can find its javascript functions in the template's <strong>scripts.js</strong> file. </p>
+					<p class="notice info">Add a <strong>.fullscreen</strong> classes to the &lt;body&gt; so the page covers browser's screen.</p>
+					<p class="notice success">Use your white logo on a fullscreen page for contrast.</p>
+					<p class="smaller-padding">Make sure there is a <strong>cycle</strong> and <strong>kenburns</strong> script loaded before the closing body tag.</p>
+					<pre class="language-html">
+&lt;script src="js/jquery.cycle.min.js"&gt;&lt;/script&gt; 
+&lt;script src="js/kenburns.js"&gt;&lt;/script&gt; 
+					</pre>
+					<p class="smaller-padding">Control the gallery speed and other options in js/scripts.js:</p>
+					<pre class="language-javascript">
+jQuery('#kenburns').kenburns({
+	images: gallery_set,
+	frames_per_second: 30,
+	display_time: 5000,
+	fade_time: 1000,
+	zoom: 1.2,
+	background_color:'#F7F6F5'
+});
+					</pre>
+					
+					<br />
+					
+					<h5>Video Gallery</h5>
+					<p>You can have a self-hosted videos (mp4, ogv) or a youtube/vimeo video in an auto-play fullscreen background. There are some drawbacks though: The self-hosted video will not work on mobile (because mobiles prevent auto-play videos to be loaded). You have to provide an image fallback (save it as imgs/video/fallback-video.jpg). The youtube/vimeo videos might have black stripes from the sides, if the video does not match the screen size.</p>
+					<h6>Self-hosted video</h6>
+					<p class="smaller-padding">Add this gallery HTML code to the WYSIWYG part of the page:</p>
+					<pre class="language-html">
+&lt;div class="gallery fullscreen-gallery"&gt;
+	&lt;figure class="gallery-item"&gt;
+		&lt;header class='gallery-icon'&gt;
+			&lt;div class="gallery-video" style="background-image: url('imgs/video/fallback-video.jpg');"&gt;
+				&lt;div id="video-wrap" class="video-wrap"&gt;
+					  &lt;video preload="metadata" autoplay loop id="my-video"&gt;
+						 &lt;source src="imgs/video/movie.mp4" type="video/mp4"&gt;
+						 &lt;source src="imgs/video/movie.ogv" type="video/ogg"&gt;
+					  &lt;/video&gt;
+				 &lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/header&gt;	
+		&lt;figcaption class='gallery-caption'&gt;
+			&lt;div class="entry-summary"&gt;
+				TEXT
+			&lt;/div&gt;
+		&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+					</pre>
+					<p class="smaller-padding">To load a self-hosted video, save the video as imgs/video/video.mp4 and imgs/video/video.ogv (use a good converting software like The Miro video converter) and load this plugin before the closing body tag:</p>
+					<pre class="language-html">
+&lt;script src="js/backgroundVideo.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+	$(document).ready(function() {
+		$('#my-video').backgroundVideo({
+               pauseVideoOnViewLoss: false
+		});
+	});
+&lt;/script&gt;
+					</pre>
+					<h6>Vimeo/Youtube video</h6>
+					<p class="smaller-padding">To load a youtube or vimeo video, add this code and plugin before the closing body tag:</p>
+					<pre class="language-html">
+&lt;script src="js/okvideo.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+	$(function(){
+		$.okvideo({ video: '121007977' }) // YouTube or Vimeo ID
+	});
+&lt;/script&gt;
+					</pre>
+					<p>You can find more options for this plugin at <a href="https://github.com/okfocus/okvideo" target="_blank">https://github.com/okfocus/okvideo</a>.</p>
+					
+					<br />
+	
+					<h5>Before / After Gallery</h5>
+					<p class="smaller-padding">This is a special kind of gallery of only 2 images with the same width and height, therefore there's a different, simpler markup for this:</p>
+					<pre class="language-html">
+&lt;div class="gallery before-after"&gt;
+	&lt;img width="600" height="400" src="imgs/image-before.jpg" alt="before" /&gt;
+	&lt;img width="600" height="400" src="imgs/image-after.jpg"  alt="after" /&gt;
+&lt;/div&gt;
+					</pre>
+					<p class="notice info">Make sure both images are the same size. Change the width and height above.</p>
+					<p class="smaller-padding">Make sure there is an <strong>imagereveal</strong> script loaded before the closing body tag.</p>
+					<pre class="language-html">
+&lt;script src="js/jquery.imagereveal.js"&gt;&lt;/script&gt; 
+					</pre>
+				</div>
+			</div>
+
+			<hr class="divider" />
+			<hr />
+
+			<!-- 05 -->
+			<div class="column-grid column-grid-3">
+				<div class="column column-span-1 column-push-0 column-first">
+					<h2 id="05" class="big no-margin">#05</h2>
+					<h3><strong class="small">Setting up Your Homepage</strong></h3>
+					<br />
+					<h4 class="small grey">Fullscreen One-Image Gallery, Text Carousel</h4>
+				</div>
+				<div class="column column-span-2 column-push-0 column-last">
+					<p>Your index.html should can be any page you want, a simple page with a simple gallery, or a fullscreen page with a large gallery. The demo index page is a fullscreen gallery with just one image, with headings and a simple text carousel below.</p>
+					<p class="notice success">Use your white logo on a fullscreen page for contrast.</p>
+					<p class="notice info">Add a <strong>.fullscreen</strong> classes to the &lt;body&gt; so the page covers browser's screen.</p>
+					<p class="smaller-padding">The markup of the gallery looks like this:</p>
+					<pre class="language-html">
+&lt;div class="gallery fullscreen-gallery"&gt;
+	&lt;figure class="gallery-item"&gt;
+		&lt;header class='gallery-icon'&gt;
+			&lt;img src="imgs/image.jpg" alt="" /&gt;
+		&lt;/header&gt;
+		&lt;figcaption class='gallery-caption'&gt;
+			&lt;div class="entry-summary"&gt;
+				&lt;h2 class="big no-margin"&gt;&lt;strong&gt;HEADING&lt;/strong&gt;&lt;/h2&gt;
+				&lt;h2&gt;Smaller heading&lt;/h2&gt;&lt;br /&gt;
+				&lt;div class="blog-oneline-carousel"&gt;
+					&lt;h3&gt;Latest&lt;/h3&gt;
+					&lt;div class="viewport"&gt;
+						&lt;ul class="overview"&gt;
+							&lt;li&gt;Text 1&lt;/li&gt;
+							&lt;li&gt;Text 2&lt;/li&gt;
+						&lt;/ul&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/div&gt;
+					</pre>
+					<p class="smaller-padding">Make sure you added the carousel script:</p>
+					<pre class="language-html">
+&lt;script src="js/jquery.tinycarousel.min.js"&gt;&lt;/script&gt; 
+					</pre>
+					
+				</div>
+			</div>
+
+			<hr class="divider" />
+			<hr />
+
+			<!-- 06 -->
+			<div class="column-grid column-grid-3">
+				<div class="column column-span-1 column-push-0 column-first">
+					<h2 id="06" class="big no-margin">#06</h2>
+					<h3><strong class="small">Blog Page Styles</strong></h3>
+					<br />
+					<h4 class="small grey"></h4>
+				</div>
+				<div class="column column-span-2 column-push-0 column-last">
+					<p>The blog page is a standard page that has a div wrapping around blog posts summaries and a div wrapping around the blog post. Such page can have a featured image header, but doesn't have to. It's up to you which design you prefer.</p>
+					<pre class="language-html">
+&lt;div id="blog-timeline"&gt;
+	&lt;article&gt;
+		&lt;div class="featured-image"&gt;
+			&lt;a href="blog-post.html"&gt;&lt;img src="imgs/image.jpg" alt="" /&gt;&lt;/a&gt;
+		&lt;/div&gt;
+
+		&lt;div class="entry-meta"&gt;
+			&lt;div class="entry-date"&gt;
+				&lt;strong&gt;23&lt;/strong&gt; / May 2015&lt;/time&gt;
+			&lt;/div&gt;
+			&lt;div class="entry-category"&gt;
+				&lt;a href="#" rel="category tag"&gt;Category&lt;/a&gt;	
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;h2&gt;Heading&lt;/h2&gt;
+		&lt;div class="entry-summary"&gt;
+			&lt;p&gt;TEXT&lt;/p&gt;
+			&lt;p&gt;&lt;a href="blog-post.html"&gt;Read more&lt;/a&gt;&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/article&gt;
+	... MORE ARTICLES ...
+&lt;/div&gt;
+&lt;div id="blog-post"&gt;
+	BLOG POST ARTICLE
+&lt;/div&gt;
+					</pre>
+					<p class="smaller-padding">Don't forget to add masonry script before the ending body tag:</p>
+					<pre class="language-html">
+&lt;script src="js/isotope.pkgd.min.js"&gt;&lt;/script&gt; 
+					</pre>
+					
+				</div>
+			</div>
+
+			<hr class="divider" />
+			<hr />
+
+			<!-- 07 -->
+			<div class="column-grid column-grid-3">
+				<div class="column column-span-1 column-push-0 column-first">
+					<h2 id="07" class="big no-margin">#07</h2>
+					<h3><strong class="small">Contact Page - Contact Form and Google Map</strong></h3>
+					<br />
+					<h4 class="small grey">PHP for Contact Form, Google Map</h4>
+				</div>
+				<div class="column column-span-2 column-push-0 column-last">
+					<p>The contact page has a map and form. Make sure you have PHP installed on your server first. Go to the <em>contact</em> folder, open the <strong>contact.php</strong> file and change the email address on line 53 to yours.</p>
+					<p class="smaller-padding">For a google map in the featured image area, add these scripts in the &lt;head&gt; just below jquery:</p>
+					<pre class="language-html">
+&lt;script src='http://maps.google.com/maps/api/js?sensor=true&#038;ver=4.0'&gt;&lt;/script&gt;
+&lt;script src="js/jquery.gmap.min.js"&gt;&lt;/script&gt;
+					</pre>
+					<p class="smaller-padding">The google map goes to the featured image header, along with the script:</p>
+					<pre class="language-html">&lt;div class="featured-image-header"&gt;&lt;div id="gmap"&gt;&lt;script&gt;
+		jQuery(document).ready(function() {
+			jQuery("#gmap").gMap({
+				scrollwheel: false,
+				zoom: 14,
+				markers:[{
+					address: "2949 4th Ave W, Vancouver, BC V6K 1R3",
+					icon: {
+						image: "imgs/mapmarker.png", iconsize: [48,48], iconanchor: [48,48]
+					}
+					}],
+				controls: {
+				   panControl: true,  zoomControl: true,   mapTypeControl: false,   scaleControl: true,   streetViewControl: false,   overviewMapControl: false
+				},
+			});
+		});&lt;/script&gt;&lt;/div&gt;&lt;/div&gt;
+					</pre>
+					<p>Here you can control many aspects of the map, but the most important would probably be the address. Change it and you're good to go!</p>
+					<p class="notice info">Make sure the maps.google.com site can find your address for the map to work.</p>
+				</div>
+			</div>
+
+			<hr class="divider" />
+			<hr />
+
+			<!-- 08 -->
+			<div class="column-grid column-grid-3">
+				<div class="column column-span-1 column-push-0 column-first">
+					<h2 id="08" class="big no-margin">#08</h2>
+					<h3><strong class="small">Custom Color Scheme</strong></h3>
+					<br />
+					<h4 class="small grey">Creating Your Own Color Scheme</h4>
+				</div>
+				<div class="column column-span-2 column-push-0 column-last">
+					<p>To create your own color scheme, there is a <strong>my-color-scheme.css</strong> css file prepared for you in the <em>css</em> folder. Add it in the &lt;head&gt; right under style.css. This will override all colors with your own.</p>
+					<pre class="language-html">&lt;link rel="stylesheet" href="style.css" media="screen" /&gt;&lt;link rel="stylesheet" href="css/my-color-scheme.css" media="screen" /&gt;</pre>
+					<p>The <strong>my-color-scheme.css</strong> file contains the default color for the light background and dark text. For a dark background and light text, load <strong>dark-color-scheme.css</strong> under style.css.</p>
+					<p>To change colors quickly, find and replace (Ctrl+H in your editor) the individual colors:</p>
+					<ol>
+						<li> Background (Default: #F7F6F5)</li>
+						<li>Links Color (Default: #EA6200)</li>
+						<li>Text Color (Default: #222)</li>
+						<li>Middle Grey Color (Default: #555)</li>
+						<li> Light Grey Color (Default: #ccc)</li>
+					</ol>
+					<p class="notice info"><strong>The background color</strong> is also used as a text color - content over images has to be white to be readable.</p>
+					<p class="notice info"><strong>The grey colors</strong> are used for input borders and various lines.</p>
+					<p class="notice success"><strong>Switch the logos</strong> white ↔ dark if you're using the dark color scheme.</p>
+				</div>
+			</div>
+
+			<hr class="divider" />
+
+
+			<!-- WYSIWYG ends here __-->
+		</div><!-- END .wrapper -->
+		
+	</section>
+
+
+        <footer id="footer" role="contentinfo">
+		<p class="back-to-top"><a href="#header">Back to top ↑</a></p>
+		<p class="copyright">Superior Core &copy; 2016</p>
+		<ul class="social-icons">
+			<li><a href="http://www.facebook.com/sharer.php?u= http://www.lostiemposcambian.com/blog/posts/share-fb/share-fb.html&t=proyecto" target="_blank" title="Facebook"><i class="icon-facebook"></i></a></li>
+			<li><a href="http://twitter.com/home?status=http://www.midominio.com" target="_blank" title="Twitter"><i class="icon-twitter"></i></a></li>								
+		</ul>	
+	</footer>
+
+<!-- Javascripts ______________________________________-->
+<script src="js/jquery.min.js"></script> 
+<script src="js/retina.min.js"></script> 
+<!-- include accordion / tabs plugin -->
+<script src="js/whistles.min.js"></script>
+<!-- include image popups -->
+<script src="js/jquery.magnific-popup.min.js"></script> 
+<!-- include svg line drawing plugin -->
+<script src="js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="js/scripts.js"></script>
+
+<!-- include syntax highlighter -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="http://balupton.github.com/jquery-syntaxhighlighter/scripts/jquery.syntaxhighlighter.min.js"></script>
+<script type="text/javascript">$.SyntaxHighlighter.init();</script>
+</body>
+</html>
