@@ -6,8 +6,8 @@ from apiclient import discovery
 from oauth2client import client
 
 #Constantes Globales
-CLIENT_SECRET_FILE = 'CLASSES/client_id.json'   # Archivo de autorización
-SCOPE = 'https://www.googleapis.com/auth/gmail.readonly'    #Tipo de acceso
+CLIENT_SECRET_FILE = '../CLASSES/client_id.json'   # Archivo de autorización
+SCOPE = 'https://www.googleapis.com/auth/gmail.readonly'    # Tipo de acceso
 
 class Credencial():
     """
