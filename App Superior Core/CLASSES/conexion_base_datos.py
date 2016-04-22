@@ -61,7 +61,7 @@ class ConexionBaseDatos():
         grupos = []
         try:
             grupos = self.graph.cypher.execute(consulta,
-                                    {"E":usuario.get_email()})
+                                    {"E": usuario.get_email()})
             return grupos
         except:
             return grupos
@@ -76,8 +76,8 @@ class ConexionBaseDatos():
             "fecha_creacion:{F}})")
         try:
             self.graph.cypher.execute(consulta,
-                    {"N":grupo.get_nombre(), "D":grupo.get_descripcion(),
-                     "F":grupo.get_fecha_creacion()})
+                    {"N": grupo.get_nombre(), "D": grupo.get_descripcion(),
+                     "F": grupo.get_fecha_creacion()})
             return True
         except:
             return False
@@ -88,9 +88,9 @@ class ConexionBaseDatos():
             "ultimo_acceso:{U}, total_emails:{T}})")
         try:
             self.graph.cypher.execute(consulta,
-                    {"E":usuario.get_email(), "N":usuario.get_nombre(),
-                     "U":usuario.get_ultimo_acceso(),
-                     "T":usuario.get_total_emails()})
+                    {"E": usuario.get_email(), "N": usuario.get_nombre(),
+                     "U": usuario.get_ultimo_acceso(),
+                     "T": usuario.get_total_emails()})
             return True
         except:
             return False
@@ -101,9 +101,28 @@ class ConexionBaseDatos():
             "g.nombre={N} CREATE (u)-[r:EN_GRUPO{tipo:{T}}]->(g)")
 
         try:
-            self.graph.cypher.execute(consulta, {"E":usuario.get_email(),
-                    "N":grupo.get_nombre(), "T":tipo})
+            self.graph.cypher.execute(consulta, {"E": usuario.get_email(),
+                    "N": grupo.get_nombre(), "T": tipo})
             return True
         except:
             return False
 
+
+    def act_ultimo_acceso_usr(self, usuario, ultimo_acceso):
+        consulta = ("MATCH(u:Usuario{email:{E}}) SET u.ultimo_acceso={U}")
+        try:
+            self.graph.cypher.execute(consulta, {"E": usuario.get_email(),
+                    "U": ultimo_acceso})
+            return True
+        except:
+            return False
+
+
+    def act_total_emails_usr(self, usuario, total_emails):
+        consulta = ("MATCH(u:Usuario{email:{E}}) SET u.total_emails={T}")
+        try:
+            self.graph.cypher.execute(consulta, {"E": usuario.get_email(),
+                        "T": total_emails})
+            return True
+        except:
+            return False

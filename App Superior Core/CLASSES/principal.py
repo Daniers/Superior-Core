@@ -58,17 +58,30 @@ class Principal(QtGui.QMainWindow):
         self.usr_actual = Usuario(email=email, ultimo_acceso=fecha,
                      total_emails=total_mensajes)
 
-        self.principal.lb_usuario.setText(self.usr_actual.get_email())
-        self.principal.lb_total.setText(str(self.usr_actual.get_total_emails()))
-
         # Consulta base datos
         u = self.conexionDB.consultar_usuario(self.usr_actual)
         if u == None:
             self.conexionDB.crear_usuario(self.usr_actual)
+        else:
+            self.conexionDB.act_ultimo_acceso_usr(self.usr_actual, fecha)
+            self.conexionDB.act_total_emails_usr(self.usr_actual,
+                                        total_mensajes)
+            grupos = self.conexionDB.consultar_grupos_usuario(self.usr_actual)
+            self.llenar_tabla_grupos(grupos)
+
+        self.principal.lb_usuario.setText(self.usr_actual.get_email())
+        self.principal.lb_total.setText(str(self.usr_actual.get_total_emails()))
 
 
-    def rasputin(self):
+    def rasputin(self):    #  Pruebas
         ob = InformacionGrupo()
 
-    def rasputin2(self):
+
+    def rasputin2(self):    #  Pruebas
         ob = NuevoGrupo()
+
+
+    def llenar_tabla_grupos(self, grupos):
+        if len(grupos) != 0:
+            for item in grupos:
+                self.principal.listaGrupos.addItem(item)

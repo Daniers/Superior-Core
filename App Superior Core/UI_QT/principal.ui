@@ -173,7 +173,7 @@
          </widget>
         </item>
         <item>
-         <widget class="QListWidget" name="listWidget"/>
+         <widget class="QListWidget" name="listaGrupos"/>
         </item>
        </layout>
       </item>
@@ -268,14 +268,8 @@
    </layout>
    <zorder>line</zorder>
    <zorder>line_2</zorder>
-   <zorder>listWidget</zorder>
-   <zorder>label_2</zorder>
-   <zorder>btNuevo</zorder>
    <zorder></zorder>
    <zorder></zorder>
-   <zorder>label_5</zorder>
-   <zorder>horizontalSpacer_2</zorder>
-   <zorder>label_2</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
