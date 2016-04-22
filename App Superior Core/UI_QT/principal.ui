@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>878</width>
-    <height>491</height>
+    <width>382</width>
+    <height>506</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>SuperiorCore App</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
@@ -31,115 +31,116 @@
        </spacer>
       </item>
       <item>
-       <widget class="QGroupBox" name="groupBox">
-        <property name="autoFillBackground">
-         <bool>false</bool>
-        </property>
-        <property name="title">
-         <string>Información Login</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-        <property name="flat">
-         <bool>false</bool>
-        </property>
-        <property name="checkable">
-         <bool>false</bool>
-        </property>
-        <layout class="QFormLayout" name="formLayout">
-         <property name="fieldGrowthPolicy">
-          <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-         </property>
-         <item row="0" column="0">
-          <widget class="QLabel" name="label">
-           <property name="font">
-            <font>
-             <family>Sans Serif</family>
-             <pointsize>10</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="frameShape">
-            <enum>QFrame::NoFrame</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Raised</enum>
-           </property>
-           <property name="text">
-            <string>Usuario:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLabel" name="lb_usuario">
-           <property name="font">
-            <font>
-             <family>Sans Serif</family>
-             <pointsize>10</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="frameShape">
-            <enum>QFrame::Panel</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Sunken</enum>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="label_3">
-           <property name="font">
-            <font>
-             <family>Sans Serif</family>
-             <pointsize>10</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="frameShape">
-            <enum>QFrame::NoFrame</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Raised</enum>
-           </property>
-           <property name="text">
-            <string>Total Emails:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QLabel" name="lb_total">
-           <property name="font">
-            <font>
-             <family>Sans Serif</family>
-             <pointsize>10</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="frameShape">
-            <enum>QFrame::Panel</enum>
-           </property>
-           <property name="frameShadow">
-            <enum>QFrame::Sunken</enum>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="margin">
-            <number>0</number>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Información de Login:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <family>Sans Serif</family>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <property name="text">
+             <string>Usuario:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lb_usuario">
+            <property name="font">
+             <font>
+              <family>Sans Serif</family>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Panel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="font">
+             <font>
+              <family>Sans Serif</family>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <property name="text">
+             <string>Total Emails:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lb_total">
+            <property name="font">
+             <font>
+              <family>Sans Serif</family>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Panel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Sunken</enum>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="margin">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
@@ -151,17 +152,87 @@
      </widget>
     </item>
     <item>
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>40</height>
-       </size>
-      </property>
-     </spacer>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Grupos</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listaGrupos"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="font">
+           <font>
+            <pointsize>11</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Opciones</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btNuevo">
+          <property name="text">
+           <string>Nuevo</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btInfo">
+          <property name="text">
+           <string>Ver Info.</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btEliminar">
+          <property name="text">
+           <string>Eliminar</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
     </item>
     <item>
      <widget class="Line" name="line_2">
@@ -195,13 +266,17 @@
      </layout>
     </item>
    </layout>
+   <zorder>line</zorder>
+   <zorder>line_2</zorder>
+   <zorder></zorder>
+   <zorder></zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>878</width>
+     <width>382</width>
      <height>21</height>
     </rect>
    </property>
@@ -228,11 +303,11 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>811</x>
-     <y>479</y>
+     <x>371</x>
+     <y>495</y>
     </hint>
     <hint type="destinationlabel">
-     <x>467</x>
+     <x>381</x>
      <y>349</y>
     </hint>
    </hints>
