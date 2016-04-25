@@ -45,9 +45,9 @@ class Principal(QtGui.QMainWindow):
     def conectarSlots(self):
         # Conectando Slots y Signals
         QtCore.QObject.connect(self.principal.btInfo,QtCore.SIGNAL('clicked()'),
-                            self.rasputin)
+                            self.info_grupo)
         QtCore.QObject.connect(self.principal.btNuevo,QtCore.SIGNAL('clicked()'),
-                            self.rasputin2)
+                            self.nuevo_grupo)
 
 
     def cargar_usuario_actual(self):
@@ -73,15 +73,15 @@ class Principal(QtGui.QMainWindow):
         self.principal.lb_total.setText(str(self.usr_actual.get_total_emails()))
 
 
-    def rasputin(self):    #  Pruebas
+    def info_grupo(self):    #
         ob = InformacionGrupo()
 
 
-    def rasputin2(self):    #  Pruebas
+    def nuevo_grupo(self):    #  Pruebas
         ob = NuevoGrupo()
 
 
     def llenar_tabla_grupos(self, grupos):
         if len(grupos) != 0:
             for item in grupos:
-                self.principal.listaGrupos.addItem(item)
+                self.principal.listaGrupos.addItem(item.nombre)

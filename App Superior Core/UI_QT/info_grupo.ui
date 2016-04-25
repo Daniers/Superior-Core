@@ -74,7 +74,14 @@
       </widget>
      </item>
      <item>
-      <widget class="QTextEdit" name="txtDescripcion"/>
+      <widget class="QTextEdit" name="txtDescripcion">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+      </widget>
      </item>
     </layout>
    </item>
@@ -94,7 +101,24 @@
       </widget>
      </item>
      <item>
-      <widget class="QListWidget" name="listIntegrantes"/>
+      <widget class="QListWidget" name="listIntegrantes">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::WinPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+      </widget>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_2">

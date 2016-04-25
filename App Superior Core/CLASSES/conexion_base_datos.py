@@ -30,13 +30,13 @@ class ConexionBaseDatos():
     def consultar_grupo(self, grupo):    #Consulta Grupo a la DB
         g = None    # Objeto que guardara el grupo, si existe
         consulta = ("MATCH (g:Grupo{nombre:{N}}) RETURN g.nombre AS nombre,"
-            "g.descripcion AS descripcion, g.fecha_creacion AS fecha_creacion")
+            "g.descripcion AS descripcion")
 
         res = self.graph.cypher.execute(consulta, {"N":grupo.get_nombre()})
 
         if len(res) != 0:
             # Creamos un grupo
-            g = Grupo(res[0].nombre, res[0].descripcion, res[0].fecha_creacion)
+            g = Grupo(res[0].nombre, res[0].descripcion)
 
         return g    # Retorna el grupo
 
@@ -44,20 +44,20 @@ class ConexionBaseDatos():
     def consultar_usuario(self, usuario):     # Consulta Usuario a la DB
         u = None    # Objeto que guardara el usuario si existe
         consulta = ("MATCH (u:Usuario{email:{E}}) RETURN u.email AS email,"
-            "u.nombre AS nombre, u.ultimo_acceso AS ultimo_acceso,"
-            "u.total_emails AS total_emails")
+            "u.ultimo_acceso AS ultimo_acceso, u.total_emails AS total_emails")
 
         res = self.graph.cypher.execute(consulta, {"E":usuario.get_email()})
 
         if len(res) != 0:
-            u = Usuario(res[0].email, res[0].nombre, res[0].ultimo_acceso,
-                    res[0].total_emails)    # Creamos un usuario
+            # Creamos un usuario
+            u = Usuario(res[0].email, res[0].ultimo_acceso, res[0].total_emails)
 
         return u    # Retorna el usuario
 
 
     def consultar_grupos_usuario(self, usuario):
-        consulta = ("MATCH(u:Usuario{email:{E}})-->(g:Grupo) RETURN g.nombre")
+        consulta = ("MATCH(u:Usuario{email:{E}})-->(g:Grupo) RETURN g.nombre "
+                    "AS nombre")
         grupos = []
         try:
             grupos = self.graph.cypher.execute(consulta,
@@ -72,24 +72,21 @@ class ConexionBaseDatos():
 
 
     def crear_grupo(self, grupo):
-        consulta = ("CREATE (g:Grupo{nombre:{N}, descripcion:{D},"
-            "fecha_creacion:{F}})")
+        consulta = ("CREATE (g:Grupo{nombre:{N}, descripcion:{D}})")
         try:
             self.graph.cypher.execute(consulta,
-                    {"N": grupo.get_nombre(), "D": grupo.get_descripcion(),
-                     "F": grupo.get_fecha_creacion()})
+                    {"N": grupo.get_nombre(), "D": grupo.get_descripcion()})
             return True
         except:
             return False
 
 
     def crear_usuario(self, usuario):
-        consulta = ("CREATE (u:Usuario{email:{E}, nombre:{N},"
-            "ultimo_acceso:{U}, total_emails:{T}})")
+        consulta = ("CREATE (u:Usuario{email:{E}, ultimo_acceso:{U},"
+             "total_emails:{T}})")
         try:
             self.graph.cypher.execute(consulta,
-                    {"E": usuario.get_email(), "N": usuario.get_nombre(),
-                     "U": usuario.get_ultimo_acceso(),
+                    {"E": usuario.get_email(), "U": usuario.get_ultimo_acceso(),
                      "T": usuario.get_total_emails()})
             return True
         except:

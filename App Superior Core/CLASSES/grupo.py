@@ -14,13 +14,11 @@ class Grupo():
             nombre(string): Nombre del grupo, utilizado como identificador
                             dentro de la aplicación.
             descripcion(string): Descripción breve acerca del grupo.
-            fecha_creacion(string): Fecha creacion grupo en formato yyyy/mm/dd
     """
-    def __init__(self, nombre="", descripcion="", fecha_creacion=""):
+    def __init__(self, nombre="", descripcion=""):
         super(Grupo, self).__init__()
         self.nombre = nombre
         self.descripcion = descripcion
-        self.fecha_creacion = fecha_creacion
 
     # Métodos Modificadores
     def set_nombre(self, nombre):
@@ -29,15 +27,9 @@ class Grupo():
     def set_descripcion(self, descripcion):
         self.descripcion = descripcion
 
-    def set_fecha_creacion(self, fecha_creacion):
-        self.fecha_creacion = fecha_creacion
-
     # Métodos consultores
     def get_nombre(self):
         return self.nombre
 
     def get_descripcion(self):
         return self.descripcion
-
-    def get_fecha_creacion(self):
-        return self.fecha_creacion
