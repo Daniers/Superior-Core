@@ -35,11 +35,10 @@ class ConexionBaseDatos():
         res = self.graph.cypher.execute(consulta, {"N":grupo.get_nombre()})
 
         if len(res) != 0:
-            # Creamos un grupo
+             #Creamos un grupo
             g = Grupo(res[0].nombre, res[0].descripcion)
 
         return g    # Retorna el grupo
-
 
     def consultar_usuario(self, usuario):     # Consulta Usuario a la DB
         u = None    # Objeto que guardara el usuario si existe

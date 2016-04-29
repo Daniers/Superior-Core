@@ -7,6 +7,7 @@ from CLASSES.informacion_grupo import InformacionGrupo
 from CLASSES.nuevo_grupo import NuevoGrupo
 from CLASSES.usuario import Usuario
 from CLASSES.conexion_base_datos import ConexionBaseDatos
+from CLASSES.grupo import Grupo
 
 try:
     _fromUtf8 = QtCore.QString.fromUtf8
@@ -35,9 +36,9 @@ class Principal(QtGui.QMainWindow):
         self.principal = Ui_principal()
         self.principal.setupUi(self)
         self.gmail_service = permisos
+        self.item_nombre = ""
         self.usr_actual = None
         self.conexionDB = ConexionBaseDatos()    #Creamos una conexion DB
-
         self.conectarSlots()    # Funcion que conecta las funciones
         self.cargar_usuario_actual()
 
@@ -48,7 +49,12 @@ class Principal(QtGui.QMainWindow):
                             self.info_grupo)
         QtCore.QObject.connect(self.principal.btNuevo,QtCore.SIGNAL('clicked()'),
                             self.nuevo_grupo)
+        self.principal.listaGrupos.itemClicked.connect(self.item_seleccionado)
 
+
+    def item_seleccionado(self,item):
+        self.item=item
+        self.item_nombre=item.text()
 
     def cargar_usuario_actual(self):
         results = self.gmail_service.users().getProfile(userId='me').execute()
@@ -72,10 +78,9 @@ class Principal(QtGui.QMainWindow):
         self.principal.lb_usuario.setText(self.usr_actual.get_email())
         self.principal.lb_total.setText(str(self.usr_actual.get_total_emails()))
 
-
-    def info_grupo(self):    #
-        ob = InformacionGrupo()
-
+    def info_grupo(self):
+        info = InformacionGrupo(self.conexionDB,self.item_nombre,self.usr_actual.get_email())
+        info.show()
 
     def nuevo_grupo(self):    #  Pruebas
         ob = NuevoGrupo()
