@@ -29,8 +29,7 @@ class ConexionBaseDatos():
 
     def consultar_grupo(self, grupo):    #Consulta Grupo a la DB
         g = None    # Objeto que guardara el grupo, si existe
-        consulta = ("MATCH (g:Grupo{nombre:{N}}) RETURN g.nombre AS nombre,"
-            "g.descripcion AS descripcion")
+        consulta = ("MATCH (g:Grupo{nombre:{N}}) RETURN g.nombre AS nombre, g.descripcion AS descripcion")
 
         res = self.graph.cypher.execute(consulta, {"N":grupo.get_nombre()})
 
@@ -59,15 +58,20 @@ class ConexionBaseDatos():
                     "AS nombre")
         grupos = []
         try:
-            grupos = self.graph.cypher.execute(consulta,
-                                    {"E": usuario.get_email()})
+            grupos = self.graph.cypher.execute(consulta,{"E": usuario.get_email()})
             return grupos
         except:
             return grupos
 
 
-    def consultar_usuarios_grupo(self):
-        pass
+    def consultar_usuarios_grupo(self, grupo):
+        consulta = ("MATCH(u:Grupo{nombre:{E}})<-[:EN_GRUPO]-(g:Usuario) RETURN g.email AS email")
+        usuarios=[]
+        try:
+            usuarios = self.graph.cypher.execute(consulta,{'E': grupo.get_nombre()})
+            return usuarios
+        except:
+            return usuarios
 
 
     def crear_grupo(self, grupo):

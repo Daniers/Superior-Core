@@ -23,6 +23,13 @@ class InformacionGrupo(QtGui.QDialog):
     def llenar_datos_grupo(self):
         self.grupo_actual = Grupo(nombre=self.nombre_grupo, descripcion="")
         grupo_descripcion = self.conexionDB.consultar_grupo(self.grupo_actual)
+        usuarios_grupo = self.conexionDB.consultar_usuarios_grupo(self.grupo_actual)
+        self.llenar_tabla_usuarios(usuarios_grupo)
         descripciontexto=grupo_descripcion.get_descripcion()
         self.info.txtDescripcion.setText(str(descripciontexto))
         self.info.txtGrupo.setText(str(self.nombre_grupo))
+
+    def llenar_tabla_usuarios(self, usuarios):
+        if len(usuarios) != 0:
+            for item in usuarios:
+                self.info.listIntegrantes.addItem(item.email)
