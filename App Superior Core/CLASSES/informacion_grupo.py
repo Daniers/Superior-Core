@@ -13,6 +13,7 @@ class InformacionGrupo(QtGui.QDialog):
         super(InformacionGrupo, self).__init__()
         self.info = Ui_info_grupo()
         self.info.setupUi(self)
+<<<<<<< Updated upstream
         self.conexionDB=conexionDB
         self.nombre_grupo=nombre_grupo
         self.usuario_actual=usuario_actual
@@ -33,3 +34,6 @@ class InformacionGrupo(QtGui.QDialog):
         if len(usuarios) != 0:
             for item in usuarios:
                 self.info.listIntegrantes.addItem(item.email)
+=======
+        self.exec_()
+>>>>>>> Stashed changes
