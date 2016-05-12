@@ -91,6 +91,12 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>txtNombre</tabstop>
+  <tabstop>txtDescripcion</tabstop>
+  <tabstop>btCrear</tabstop>
+  <tabstop>btCancelar</tabstop>
+ </tabstops>
  <resources/>
  <connections>
   <connection>

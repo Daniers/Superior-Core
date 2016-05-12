@@ -76,6 +76,9 @@ class Ui_crear_grupo(object):
         self.retranslateUi(crear_grupo)
         QtCore.QObject.connect(self.btCancelar, QtCore.SIGNAL(_fromUtf8("clicked()")), crear_grupo.reject)
         QtCore.QMetaObject.connectSlotsByName(crear_grupo)
+        crear_grupo.setTabOrder(self.txtNombre, self.txtDescripcion)
+        crear_grupo.setTabOrder(self.txtDescripcion, self.btCrear)
+        crear_grupo.setTabOrder(self.btCrear, self.btCancelar)
 
     def retranslateUi(self, crear_grupo):
         crear_grupo.setWindowTitle(_translate("crear_grupo", "Nuevo Grupo", None))

@@ -30,7 +30,7 @@ class Login(QtGui.QDialog):
         super(Login, self).__init__()
         self.login = Ui_win_login()
         self.login.setupUi(self)
-        QtCore.QObject.connect(self.login.btAceptar,QtCore.SIGNAL('clicked()'),
+        QtCore.QObject.connect(self.login.btAceptar, QtCore.SIGNAL('clicked()'),
                             self.manejador_login)
         self.acceso = Credencial()
         self.permiso = None

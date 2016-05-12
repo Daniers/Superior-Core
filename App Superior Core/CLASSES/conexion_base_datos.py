@@ -141,7 +141,7 @@ class ConexionBaseDatos():
         try:
             self.graph.cypher.execute(consulta,
                     {"N": grupo.get_nombre(), "D": grupo.get_descripcion()})
-            self.crear_rel_usuario_grupo(usuario, grupo, "P")  # P:Propietario
+            self.crear_rel_usuario_grupo(usuario, grupo, "P")
             return True
         except:
             return False
@@ -186,7 +186,7 @@ class ConexionBaseDatos():
                 boolean: True, creación exitosa.
                          False, no se completa la operación.
         """
-        consulta = ("MATCH(u:Usuario),(g:Grupo) WHERE u.email={E} AND"
+        consulta = ("MATCH(u:Usuario),(g:Grupo) WHERE u.email={E} AND "
             "g.nombre={N} CREATE (u)-[r:EN_GRUPO{tipo:{T}}]->(g)")
 
         try:

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 class Usuario():
     """
         Clase que define a un usuario de la aplicación.

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 class Grupo():
     """
         Clase que define a un grupo dentro de la aplicación.

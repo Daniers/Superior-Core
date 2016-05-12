@@ -38,10 +38,9 @@ class Principal(QtGui.QMainWindow):
         self.gmail_service = permisos
         self.item_nombre = ""
         self.usr_actual = None
-        self.conexionDB = ConexionBaseDatos()    #Creamos una conexion DB
+        self.conexionDB = ConexionBaseDatos()    # Creamos una conexion DB
         self.conectarSlots()    # Funcion que conecta las funciones
         self.cargar_usuario_actual()
-
 
     def conectarSlots(self):
         # Conectando Slots y Signals
@@ -51,15 +50,14 @@ class Principal(QtGui.QMainWindow):
                             self.nuevo_grupo)
         self.principal.listaGrupos.itemClicked.connect(self.item_seleccionado)
 
-
-    def item_seleccionado(self,item):
-        self.item=item
-        self.item_nombre=item.text()
+    def item_seleccionado(self, item):
+        self.item = item
+        self.item_nombre = item.text()
 
     def cargar_usuario_actual(self):
         results = self.gmail_service.users().getProfile(userId='me').execute()
-        email = results.get('emailAddress',[])
-        total_mensajes = results.get('messagesTotal',[])
+        email = results.get('emailAddress', [])
+        total_mensajes = results.get('messagesTotal', [])
         fecha = dt.datetime.now().strftime("%Y/%m/%d")
         self.usr_actual = Usuario(email=email, ultimo_acceso=fecha,
                      total_emails=total_mensajes)
@@ -80,11 +78,10 @@ class Principal(QtGui.QMainWindow):
 
     def info_grupo(self):
         info = InformacionGrupo(self.conexionDB,self.item_nombre,self.usr_actual.get_email())
-        info.show()
 
-    def nuevo_grupo(self):    #  Pruebas
-        ob = NuevoGrupo()
-
+    def nuevo_grupo(self):    # Pruebas
+        nuevo = NuevoGrupo(self.conexionDB, self.usr_actual)
+        #nuevo.show()
 
     def llenar_tabla_grupos(self, grupos):
         if len(grupos) != 0:
