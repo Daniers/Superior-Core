@@ -63,4 +63,3 @@ class InformacionGrupo(QtGui.QDialog):
         if len(usuarios) != 0:
             for item in usuarios:
                 self.info.listIntegrantes.addItem(item.email)
-                print (len(self.info.listIntegrantes))

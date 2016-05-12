@@ -7,7 +7,6 @@ from CLASSES.informacion_grupo import InformacionGrupo
 from CLASSES.nuevo_grupo import NuevoGrupo
 from CLASSES.usuario import Usuario
 from CLASSES.conexion_base_datos import ConexionBaseDatos
-from CLASSES otronodo import Otronodo
 from CLASSES.grupo import Grupo
 
 try:
@@ -82,8 +81,6 @@ class Principal(QtGui.QMainWindow):
     def info_grupo(self):
         info = InformacionGrupo(self.conexionDB,self.item_nombre,self.usr_actual.get_email())
         info.show()
-        otronodo = Otronodo()
-        otronodo.show()
 
     def nuevo_grupo(self):    #  Pruebas
         ob = NuevoGrupo()
