@@ -1,0 +1,840 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module informacion_grupo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>informacion_grupo</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cjuan%20camilo%5Cdocuments%5Cgithub%5Cproyectois%5Csuperior-core%5Capp%20superior%20core%5Cclasses%5Cinformacion_grupo.py">c:\users\juan camilo\documents\github\proyectois\superior-core\app superior core\classes\informacion_grupo.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;utf-8&nbsp;-*-</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="PyQt4.QtCore.html">PyQt4.QtCore</a><br>
+</td><td width="25%" valign=top><a href="PyQt4.QtGui.html">PyQt4.QtGui</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="PyQt4.QtGui.html#QDialog">PyQt4.QtGui.QDialog</a>(<a href="PyQt4.QtGui.html#QWidget">PyQt4.QtGui.QWidget</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="informacion_grupo.html#InformacionGrupo">InformacionGrupo</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="InformacionGrupo">class <strong>InformacionGrupo</strong></a>(<a href="PyQt4.QtGui.html#QDialog">PyQt4.QtGui.QDialog</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Clase&nbsp;que&nbsp;hacer&nbsp;referencia&nbsp;a&nbsp;la&nbsp;ventana&nbsp;Informacion&nbsp;de&nbsp;Grupo,&nbsp;que<br>
+contiene&nbsp;todo&nbsp;lo&nbsp;relacionado&nbsp;a&nbsp;la&nbsp;información&nbsp;de&nbsp;un&nbsp;grupo&nbsp;específico.<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;conexionDB(obj):&nbsp;Hereda&nbsp;la&nbsp;conexion&nbsp;con&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;para&nbsp;consultas.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nombre_grupo(string):&nbsp;Nombre&nbsp;del&nbsp;grupo&nbsp;seleccionado<br>
+&nbsp;&nbsp;&nbsp;&nbsp;usuario_actual(string):&nbsp;usuario&nbsp;actual<br>
+&nbsp;<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;info(Ui_info_grupo):&nbsp;Objeto&nbsp;de&nbsp;la&nbsp;clase&nbsp;info_grupo&nbsp;que&nbsp;permite<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;interactuar&nbsp;con&nbsp;la&nbsp;interfaz&nbsp;de&nbsp;la&nbsp;ventana&nbsp;de&nbsp;informacion&nbsp;del&nbsp;grupo.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;grupo_actual(Grupo):&nbsp;Objeto&nbsp;que&nbsp;envia&nbsp;los&nbsp;datos&nbsp;actuales&nbsp;del&nbsp;grupo<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;la&nbsp;clase&nbsp;grupo&nbsp;y&nbsp;manejar&nbsp;los&nbsp;setters&nbsp;y&nbsp;getters&nbsp;de&nbsp;esta.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="informacion_grupo.html#InformacionGrupo">InformacionGrupo</a></dd>
+<dd><a href="PyQt4.QtGui.html#QDialog">PyQt4.QtGui.QDialog</a></dd>
+<dd><a href="PyQt4.QtGui.html#QWidget">PyQt4.QtGui.QWidget</a></dd>
+<dd><a href="PyQt4.QtCore.html#QObject">PyQt4.QtCore.QObject</a></dd>
+<dd><a href="sip.html#wrapper">sip.wrapper</a></dd>
+<dd><a href="PyQt4.QtGui.html#QPaintDevice">PyQt4.QtGui.QPaintDevice</a></dd>
+<dd><a href="sip.html#simplewrapper">sip.simplewrapper</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="InformacionGrupo-__init__"><strong>__init__</strong></a>(self, conexionDB, nombre_grupo, usuario_actual)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-llenar_datos_grupo"><strong>llenar_datos_grupo</strong></a>(self)</dt><dd><tt>Se&nbsp;encarga&nbsp;de&nbsp;cargar&nbsp;los&nbsp;datos&nbsp;del&nbsp;grupo&nbsp;a&nbsp;la&nbsp;interfaz&nbsp;de&nbsp;informacion&nbsp;del<br>
+grupo.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;void:&nbsp;no&nbsp;recibe&nbsp;atributos<br>
+&nbsp;<br>
+Returns:&nbsp;no&nbsp;retorna&nbsp;nada</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-llenar_tabla_usuarios"><strong>llenar_tabla_usuarios</strong></a>(self, usuarios)</dt><dd><tt>Metodo&nbsp;que&nbsp;permite&nbsp;llenar&nbsp;el&nbsp;jlisttable&nbsp;con&nbsp;los&nbsp;usuarios(emails)<br>
+pertenecientes&nbsp;al&nbsp;grupo<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;void:&nbsp;no&nbsp;recibe&nbsp;atributos<br>
+&nbsp;<br>
+Returns:&nbsp;no&nbsp;retorna&nbsp;nada</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="PyQt4.QtGui.html#QDialog">PyQt4.QtGui.QDialog</a>:<br>
+<dl><dt><a name="InformacionGrupo-accept"><strong>accept</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-accept">accept</a>()</tt></dd></dl>
+
+<strong>accepted</strong> = &lt;unbound signal accepted&gt;
+<dl><dt><a name="InformacionGrupo-actionEvent"><strong>actionEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-changeEvent"><strong>changeEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-childEvent"><strong>childEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-closeEvent"><strong>closeEvent</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-closeEvent">closeEvent</a>(QCloseEvent)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-connectNotify"><strong>connectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-contextMenuEvent"><strong>contextMenuEvent</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-contextMenuEvent">contextMenuEvent</a>(QContextMenuEvent)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-create"><strong>create</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-customEvent"><strong>customEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-destroy"><strong>destroy</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-disconnectNotify"><strong>disconnectNotify</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-done"><strong>done</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-done">done</a>(int)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-dragEnterEvent"><strong>dragEnterEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-dragLeaveEvent"><strong>dragLeaveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-dragMoveEvent"><strong>dragMoveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-dropEvent"><strong>dropEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-enabledChange"><strong>enabledChange</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-enterEvent"><strong>enterEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-event"><strong>event</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-eventFilter"><strong>eventFilter</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-eventFilter">eventFilter</a>(QObject,&nbsp;QEvent)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-exec"><strong>exec</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-exec">exec</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-exec_"><strong>exec_</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-exec_">exec_</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-extension"><strong>extension</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-extension">extension</a>()&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<strong>finished</strong> = &lt;unbound signal finished&gt;
+<dl><dt><a name="InformacionGrupo-focusInEvent"><strong>focusInEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-focusNextChild"><strong>focusNextChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-focusNextPrevChild"><strong>focusNextPrevChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-focusOutEvent"><strong>focusOutEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-focusPreviousChild"><strong>focusPreviousChild</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-fontChange"><strong>fontChange</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-hideEvent"><strong>hideEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-inputMethodEvent"><strong>inputMethodEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-isSizeGripEnabled"><strong>isSizeGripEnabled</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-isSizeGripEnabled">isSizeGripEnabled</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-keyPressEvent"><strong>keyPressEvent</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-keyPressEvent">keyPressEvent</a>(QKeyEvent)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-keyReleaseEvent"><strong>keyReleaseEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-languageChange"><strong>languageChange</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-leaveEvent"><strong>leaveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-metric"><strong>metric</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-minimumSizeHint"><strong>minimumSizeHint</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-minimumSizeHint">minimumSizeHint</a>()&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-mouseDoubleClickEvent"><strong>mouseDoubleClickEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-mouseMoveEvent"><strong>mouseMoveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-mousePressEvent"><strong>mousePressEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-mouseReleaseEvent"><strong>mouseReleaseEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-moveEvent"><strong>moveEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-open"><strong>open</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-open">open</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-orientation"><strong>orientation</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-orientation">orientation</a>()&nbsp;-&gt;&nbsp;Qt.Orientation</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-paintEvent"><strong>paintEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-paletteChange"><strong>paletteChange</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-receivers"><strong>receivers</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-reject"><strong>reject</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-reject">reject</a>()</tt></dd></dl>
+
+<strong>rejected</strong> = &lt;unbound signal rejected&gt;
+<dl><dt><a name="InformacionGrupo-resetInputContext"><strong>resetInputContext</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-resizeEvent"><strong>resizeEvent</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-resizeEvent">resizeEvent</a>(QResizeEvent)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-result"><strong>result</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-result">result</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-sender"><strong>sender</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-senderSignalIndex"><strong>senderSignalIndex</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-setExtension"><strong>setExtension</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-setExtension">setExtension</a>(QWidget)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setModal"><strong>setModal</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-setModal">setModal</a>(bool)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setOrientation"><strong>setOrientation</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-setOrientation">setOrientation</a>(Qt.Orientation)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setResult"><strong>setResult</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-setResult">setResult</a>(int)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setSizeGripEnabled"><strong>setSizeGripEnabled</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-setSizeGripEnabled">setSizeGripEnabled</a>(bool)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setVisible"><strong>setVisible</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-setVisible">setVisible</a>(bool)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-showEvent"><strong>showEvent</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-showEvent">showEvent</a>(QShowEvent)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-showExtension"><strong>showExtension</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-showExtension">showExtension</a>(bool)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-sizeHint"><strong>sizeHint</strong></a>(...)</dt><dd><tt><a href="PyQt4.QtGui.html#QDialog">QDialog</a>.<a href="#InformacionGrupo-sizeHint">sizeHint</a>()&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-tabletEvent"><strong>tabletEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-timerEvent"><strong>timerEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-updateMicroFocus"><strong>updateMicroFocus</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-wheelEvent"><strong>wheelEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-winEvent"><strong>winEvent</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="InformacionGrupo-windowActivationChange"><strong>windowActivationChange</strong></a>(...)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt4.QtGui.html#QDialog">PyQt4.QtGui.QDialog</a>:<br>
+<dl><dt><strong>Accepted</strong> = 1</dl>
+
+<dl><dt><strong>DialogCode</strong> = &lt;class 'PyQt4.QtGui.QDialog.DialogCode'&gt;</dl>
+
+<dl><dt><strong>Rejected</strong> = 0</dl>
+
+<hr>
+Methods inherited from <a href="PyQt4.QtGui.html#QWidget">PyQt4.QtGui.QWidget</a>:<br>
+<dl><dt><a name="InformacionGrupo-acceptDrops"><strong>acceptDrops</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-acceptDrops">acceptDrops</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-accessibleDescription"><strong>accessibleDescription</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-accessibleDescription">accessibleDescription</a>()&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-accessibleName"><strong>accessibleName</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-accessibleName">accessibleName</a>()&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-actions"><strong>actions</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-actions">actions</a>()&nbsp;-&gt;&nbsp;list-of-QAction</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-activateWindow"><strong>activateWindow</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-activateWindow">activateWindow</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-addAction"><strong>addAction</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-addAction">addAction</a>(QAction)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-addActions"><strong>addActions</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-addActions">addActions</a>(list-of-QAction)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-adjustSize"><strong>adjustSize</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-adjustSize">adjustSize</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-autoFillBackground"><strong>autoFillBackground</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-autoFillBackground">autoFillBackground</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-backgroundRole"><strong>backgroundRole</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-backgroundRole">backgroundRole</a>()&nbsp;-&gt;&nbsp;QPalette.ColorRole</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-baseSize"><strong>baseSize</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-baseSize">baseSize</a>()&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-childAt"><strong>childAt</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-childAt">childAt</a>(QPoint)&nbsp;-&gt;&nbsp;QWidget<br>
+QWidget.<a href="#InformacionGrupo-childAt">childAt</a>(int,&nbsp;int)&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-childrenRect"><strong>childrenRect</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-childrenRect">childrenRect</a>()&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-childrenRegion"><strong>childrenRegion</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-childrenRegion">childrenRegion</a>()&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-clearFocus"><strong>clearFocus</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-clearFocus">clearFocus</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-clearMask"><strong>clearMask</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-clearMask">clearMask</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-close"><strong>close</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-close">close</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-contentsMargins"><strong>contentsMargins</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-contentsMargins">contentsMargins</a>()&nbsp;-&gt;&nbsp;QMargins</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-contentsRect"><strong>contentsRect</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-contentsRect">contentsRect</a>()&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-contextMenuPolicy"><strong>contextMenuPolicy</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-contextMenuPolicy">contextMenuPolicy</a>()&nbsp;-&gt;&nbsp;Qt.ContextMenuPolicy</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-cursor"><strong>cursor</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-cursor">cursor</a>()&nbsp;-&gt;&nbsp;QCursor</tt></dd></dl>
+
+<strong>customContextMenuRequested</strong> = &lt;unbound signal customContextMenuRequested&gt;
+<dl><dt><a name="InformacionGrupo-devType"><strong>devType</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-devType">devType</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-effectiveWinId"><strong>effectiveWinId</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-effectiveWinId">effectiveWinId</a>()&nbsp;-&gt;&nbsp;sip.voidptr</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-ensurePolished"><strong>ensurePolished</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-ensurePolished">ensurePolished</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-find"><strong>find</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-find">find</a>(sip.voidptr)&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-focusPolicy"><strong>focusPolicy</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-focusPolicy">focusPolicy</a>()&nbsp;-&gt;&nbsp;Qt.FocusPolicy</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-focusProxy"><strong>focusProxy</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-focusProxy">focusProxy</a>()&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-focusWidget"><strong>focusWidget</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-focusWidget">focusWidget</a>()&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-font"><strong>font</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-font">font</a>()&nbsp;-&gt;&nbsp;QFont</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-fontInfo"><strong>fontInfo</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-fontInfo">fontInfo</a>()&nbsp;-&gt;&nbsp;QFontInfo</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-fontMetrics"><strong>fontMetrics</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-fontMetrics">fontMetrics</a>()&nbsp;-&gt;&nbsp;QFontMetrics</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-foregroundRole"><strong>foregroundRole</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-foregroundRole">foregroundRole</a>()&nbsp;-&gt;&nbsp;QPalette.ColorRole</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-frameGeometry"><strong>frameGeometry</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-frameGeometry">frameGeometry</a>()&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-frameSize"><strong>frameSize</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-frameSize">frameSize</a>()&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-geometry"><strong>geometry</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-geometry">geometry</a>()&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-getContentsMargins"><strong>getContentsMargins</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-getContentsMargins">getContentsMargins</a>()&nbsp;-&gt;&nbsp;(int,&nbsp;int,&nbsp;int,&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-grabGesture"><strong>grabGesture</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-grabGesture">grabGesture</a>(Qt.GestureType,&nbsp;Qt.GestureFlags&nbsp;flags=Qt.GestureFlags(0))</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-grabKeyboard"><strong>grabKeyboard</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-grabKeyboard">grabKeyboard</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-grabMouse"><strong>grabMouse</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-grabMouse">grabMouse</a>()<br>
+QWidget.<a href="#InformacionGrupo-grabMouse">grabMouse</a>(QCursor)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-grabShortcut"><strong>grabShortcut</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-grabShortcut">grabShortcut</a>(QKeySequence,&nbsp;Qt.ShortcutContext&nbsp;context=Qt.WindowShortcut)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-graphicsEffect"><strong>graphicsEffect</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-graphicsEffect">graphicsEffect</a>()&nbsp;-&gt;&nbsp;QGraphicsEffect</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-graphicsProxyWidget"><strong>graphicsProxyWidget</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-graphicsProxyWidget">graphicsProxyWidget</a>()&nbsp;-&gt;&nbsp;QGraphicsProxyWidget</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-hasFocus"><strong>hasFocus</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-hasFocus">hasFocus</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-hasMouseTracking"><strong>hasMouseTracking</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-hasMouseTracking">hasMouseTracking</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-height"><strong>height</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-height">height</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-heightForWidth"><strong>heightForWidth</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-heightForWidth">heightForWidth</a>(int)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-hide"><strong>hide</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-hide">hide</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-inputContext"><strong>inputContext</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-inputContext">inputContext</a>()&nbsp;-&gt;&nbsp;QInputContext</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-inputMethodHints"><strong>inputMethodHints</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-inputMethodHints">inputMethodHints</a>()&nbsp;-&gt;&nbsp;Qt.InputMethodHints</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-inputMethodQuery"><strong>inputMethodQuery</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-inputMethodQuery">inputMethodQuery</a>(Qt.InputMethodQuery)&nbsp;-&gt;&nbsp;object</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-insertAction"><strong>insertAction</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-insertAction">insertAction</a>(QAction,&nbsp;QAction)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-insertActions"><strong>insertActions</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-insertActions">insertActions</a>(QAction,&nbsp;list-of-QAction)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isActiveWindow"><strong>isActiveWindow</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isActiveWindow">isActiveWindow</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isAncestorOf"><strong>isAncestorOf</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isAncestorOf">isAncestorOf</a>(QWidget)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isEnabled"><strong>isEnabled</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isEnabled">isEnabled</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isEnabledTo"><strong>isEnabledTo</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isEnabledTo">isEnabledTo</a>(QWidget)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isEnabledToTLW"><strong>isEnabledToTLW</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isEnabledToTLW">isEnabledToTLW</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isFullScreen"><strong>isFullScreen</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isFullScreen">isFullScreen</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isHidden"><strong>isHidden</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isHidden">isHidden</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isLeftToRight"><strong>isLeftToRight</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isLeftToRight">isLeftToRight</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isMaximized"><strong>isMaximized</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isMaximized">isMaximized</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isMinimized"><strong>isMinimized</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isMinimized">isMinimized</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isModal"><strong>isModal</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isModal">isModal</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isRightToLeft"><strong>isRightToLeft</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isRightToLeft">isRightToLeft</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isTopLevel"><strong>isTopLevel</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isTopLevel">isTopLevel</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isVisible"><strong>isVisible</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isVisible">isVisible</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isVisibleTo"><strong>isVisibleTo</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isVisibleTo">isVisibleTo</a>(QWidget)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isWindow"><strong>isWindow</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isWindow">isWindow</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isWindowModified"><strong>isWindowModified</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-isWindowModified">isWindowModified</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-keyboardGrabber"><strong>keyboardGrabber</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-keyboardGrabber">keyboardGrabber</a>()&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-layout"><strong>layout</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-layout">layout</a>()&nbsp;-&gt;&nbsp;QLayout</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-layoutDirection"><strong>layoutDirection</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-layoutDirection">layoutDirection</a>()&nbsp;-&gt;&nbsp;Qt.LayoutDirection</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-locale"><strong>locale</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-locale">locale</a>()&nbsp;-&gt;&nbsp;QLocale</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-lower"><strong>lower</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-lower">lower</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-mapFrom"><strong>mapFrom</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-mapFrom">mapFrom</a>(QWidget,&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-mapFromGlobal"><strong>mapFromGlobal</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-mapFromGlobal">mapFromGlobal</a>(QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-mapFromParent"><strong>mapFromParent</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-mapFromParent">mapFromParent</a>(QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-mapTo"><strong>mapTo</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-mapTo">mapTo</a>(QWidget,&nbsp;QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-mapToGlobal"><strong>mapToGlobal</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-mapToGlobal">mapToGlobal</a>(QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-mapToParent"><strong>mapToParent</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-mapToParent">mapToParent</a>(QPoint)&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-mask"><strong>mask</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-mask">mask</a>()&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-maximumHeight"><strong>maximumHeight</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-maximumHeight">maximumHeight</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-maximumSize"><strong>maximumSize</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-maximumSize">maximumSize</a>()&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-maximumWidth"><strong>maximumWidth</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-maximumWidth">maximumWidth</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-minimumHeight"><strong>minimumHeight</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-minimumHeight">minimumHeight</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-minimumSize"><strong>minimumSize</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-minimumSize">minimumSize</a>()&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-minimumWidth"><strong>minimumWidth</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-minimumWidth">minimumWidth</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-mouseGrabber"><strong>mouseGrabber</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-mouseGrabber">mouseGrabber</a>()&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-move"><strong>move</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-move">move</a>(QPoint)<br>
+QWidget.<a href="#InformacionGrupo-move">move</a>(int,&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-nativeParentWidget"><strong>nativeParentWidget</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-nativeParentWidget">nativeParentWidget</a>()&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-nextInFocusChain"><strong>nextInFocusChain</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-nextInFocusChain">nextInFocusChain</a>()&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-normalGeometry"><strong>normalGeometry</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-normalGeometry">normalGeometry</a>()&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-overrideWindowFlags"><strong>overrideWindowFlags</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-overrideWindowFlags">overrideWindowFlags</a>(Qt.WindowFlags)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-overrideWindowState"><strong>overrideWindowState</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-overrideWindowState">overrideWindowState</a>(Qt.WindowStates)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-paintEngine"><strong>paintEngine</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-paintEngine">paintEngine</a>()&nbsp;-&gt;&nbsp;QPaintEngine</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-palette"><strong>palette</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-palette">palette</a>()&nbsp;-&gt;&nbsp;QPalette</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-parentWidget"><strong>parentWidget</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-parentWidget">parentWidget</a>()&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-pos"><strong>pos</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-pos">pos</a>()&nbsp;-&gt;&nbsp;QPoint</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-previousInFocusChain"><strong>previousInFocusChain</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-previousInFocusChain">previousInFocusChain</a>()&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-raise_"><strong>raise_</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-raise_">raise_</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-rect"><strong>rect</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-rect">rect</a>()&nbsp;-&gt;&nbsp;QRect</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-releaseKeyboard"><strong>releaseKeyboard</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-releaseKeyboard">releaseKeyboard</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-releaseMouse"><strong>releaseMouse</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-releaseMouse">releaseMouse</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-releaseShortcut"><strong>releaseShortcut</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-releaseShortcut">releaseShortcut</a>(int)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-removeAction"><strong>removeAction</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-removeAction">removeAction</a>(QAction)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-render"><strong>render</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-render">render</a>(QPaintDevice,&nbsp;QPoint&nbsp;targetOffset=QPoint(),&nbsp;QRegion&nbsp;sourceRegion=QRegion(),&nbsp;QWidget.RenderFlags&nbsp;flags=QWidget.DrawWindowBackground|QWidget.DrawChildren)<br>
+QWidget.<a href="#InformacionGrupo-render">render</a>(QPainter,&nbsp;QPoint&nbsp;targetOffset=QPoint(),&nbsp;QRegion&nbsp;sourceRegion=QRegion(),&nbsp;QWidget.RenderFlags&nbsp;flags=QWidget.DrawWindowBackground|QWidget.DrawChildren)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-repaint"><strong>repaint</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-repaint">repaint</a>()<br>
+QWidget.<a href="#InformacionGrupo-repaint">repaint</a>(int,&nbsp;int,&nbsp;int,&nbsp;int)<br>
+QWidget.<a href="#InformacionGrupo-repaint">repaint</a>(QRect)<br>
+QWidget.<a href="#InformacionGrupo-repaint">repaint</a>(QRegion)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-resize"><strong>resize</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-resize">resize</a>(QSize)<br>
+QWidget.<a href="#InformacionGrupo-resize">resize</a>(int,&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-restoreGeometry"><strong>restoreGeometry</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-restoreGeometry">restoreGeometry</a>(QByteArray)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-saveGeometry"><strong>saveGeometry</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-saveGeometry">saveGeometry</a>()&nbsp;-&gt;&nbsp;QByteArray</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-scroll"><strong>scroll</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-scroll">scroll</a>(int,&nbsp;int)<br>
+QWidget.<a href="#InformacionGrupo-scroll">scroll</a>(int,&nbsp;int,&nbsp;QRect)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setAcceptDrops"><strong>setAcceptDrops</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setAcceptDrops">setAcceptDrops</a>(bool)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setAccessibleDescription"><strong>setAccessibleDescription</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setAccessibleDescription">setAccessibleDescription</a>(str)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setAccessibleName"><strong>setAccessibleName</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setAccessibleName">setAccessibleName</a>(str)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setAttribute"><strong>setAttribute</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setAttribute">setAttribute</a>(Qt.WidgetAttribute,&nbsp;bool&nbsp;on=True)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setAutoFillBackground"><strong>setAutoFillBackground</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setAutoFillBackground">setAutoFillBackground</a>(bool)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setBackgroundRole"><strong>setBackgroundRole</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setBackgroundRole">setBackgroundRole</a>(QPalette.ColorRole)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setBaseSize"><strong>setBaseSize</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setBaseSize">setBaseSize</a>(int,&nbsp;int)<br>
+QWidget.<a href="#InformacionGrupo-setBaseSize">setBaseSize</a>(QSize)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setContentsMargins"><strong>setContentsMargins</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setContentsMargins">setContentsMargins</a>(int,&nbsp;int,&nbsp;int,&nbsp;int)<br>
+QWidget.<a href="#InformacionGrupo-setContentsMargins">setContentsMargins</a>(QMargins)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setContextMenuPolicy"><strong>setContextMenuPolicy</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setContextMenuPolicy">setContextMenuPolicy</a>(Qt.ContextMenuPolicy)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setCursor"><strong>setCursor</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setCursor">setCursor</a>(QCursor)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setDisabled"><strong>setDisabled</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setDisabled">setDisabled</a>(bool)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setEnabled"><strong>setEnabled</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setEnabled">setEnabled</a>(bool)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setFixedHeight"><strong>setFixedHeight</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setFixedHeight">setFixedHeight</a>(int)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setFixedSize"><strong>setFixedSize</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setFixedSize">setFixedSize</a>(QSize)<br>
+QWidget.<a href="#InformacionGrupo-setFixedSize">setFixedSize</a>(int,&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setFixedWidth"><strong>setFixedWidth</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setFixedWidth">setFixedWidth</a>(int)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setFocus"><strong>setFocus</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setFocus">setFocus</a>()<br>
+QWidget.<a href="#InformacionGrupo-setFocus">setFocus</a>(Qt.FocusReason)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setFocusPolicy"><strong>setFocusPolicy</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setFocusPolicy">setFocusPolicy</a>(Qt.FocusPolicy)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setFocusProxy"><strong>setFocusProxy</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setFocusProxy">setFocusProxy</a>(QWidget)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setFont"><strong>setFont</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setFont">setFont</a>(QFont)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setForegroundRole"><strong>setForegroundRole</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setForegroundRole">setForegroundRole</a>(QPalette.ColorRole)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setGeometry"><strong>setGeometry</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setGeometry">setGeometry</a>(QRect)<br>
+QWidget.<a href="#InformacionGrupo-setGeometry">setGeometry</a>(int,&nbsp;int,&nbsp;int,&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setGraphicsEffect"><strong>setGraphicsEffect</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setGraphicsEffect">setGraphicsEffect</a>(QGraphicsEffect)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setHidden"><strong>setHidden</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setHidden">setHidden</a>(bool)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setInputContext"><strong>setInputContext</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setInputContext">setInputContext</a>(QInputContext)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setInputMethodHints"><strong>setInputMethodHints</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setInputMethodHints">setInputMethodHints</a>(Qt.InputMethodHints)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setLayout"><strong>setLayout</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setLayout">setLayout</a>(QLayout)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setLayoutDirection"><strong>setLayoutDirection</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setLayoutDirection">setLayoutDirection</a>(Qt.LayoutDirection)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setLocale"><strong>setLocale</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setLocale">setLocale</a>(QLocale)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setMask"><strong>setMask</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setMask">setMask</a>(QBitmap)<br>
+QWidget.<a href="#InformacionGrupo-setMask">setMask</a>(QRegion)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setMaximumHeight"><strong>setMaximumHeight</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setMaximumHeight">setMaximumHeight</a>(int)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setMaximumSize"><strong>setMaximumSize</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setMaximumSize">setMaximumSize</a>(int,&nbsp;int)<br>
+QWidget.<a href="#InformacionGrupo-setMaximumSize">setMaximumSize</a>(QSize)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setMaximumWidth"><strong>setMaximumWidth</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setMaximumWidth">setMaximumWidth</a>(int)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setMinimumHeight"><strong>setMinimumHeight</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setMinimumHeight">setMinimumHeight</a>(int)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setMinimumSize"><strong>setMinimumSize</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setMinimumSize">setMinimumSize</a>(int,&nbsp;int)<br>
+QWidget.<a href="#InformacionGrupo-setMinimumSize">setMinimumSize</a>(QSize)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setMinimumWidth"><strong>setMinimumWidth</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setMinimumWidth">setMinimumWidth</a>(int)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setMouseTracking"><strong>setMouseTracking</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setMouseTracking">setMouseTracking</a>(bool)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setPalette"><strong>setPalette</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setPalette">setPalette</a>(QPalette)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setParent"><strong>setParent</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setParent">setParent</a>(QWidget)<br>
+QWidget.<a href="#InformacionGrupo-setParent">setParent</a>(QWidget,&nbsp;Qt.WindowFlags)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setShortcutAutoRepeat"><strong>setShortcutAutoRepeat</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setShortcutAutoRepeat">setShortcutAutoRepeat</a>(int,&nbsp;bool&nbsp;enabled=True)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setShortcutEnabled"><strong>setShortcutEnabled</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setShortcutEnabled">setShortcutEnabled</a>(int,&nbsp;bool&nbsp;enabled=True)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setShown"><strong>setShown</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setShown">setShown</a>(bool)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setSizeIncrement"><strong>setSizeIncrement</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setSizeIncrement">setSizeIncrement</a>(int,&nbsp;int)<br>
+QWidget.<a href="#InformacionGrupo-setSizeIncrement">setSizeIncrement</a>(QSize)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setSizePolicy"><strong>setSizePolicy</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setSizePolicy">setSizePolicy</a>(QSizePolicy)<br>
+QWidget.<a href="#InformacionGrupo-setSizePolicy">setSizePolicy</a>(QSizePolicy.Policy,&nbsp;QSizePolicy.Policy)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setStatusTip"><strong>setStatusTip</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setStatusTip">setStatusTip</a>(str)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setStyle"><strong>setStyle</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setStyle">setStyle</a>(QStyle)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setStyleSheet"><strong>setStyleSheet</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setStyleSheet">setStyleSheet</a>(str)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setTabOrder"><strong>setTabOrder</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setTabOrder">setTabOrder</a>(QWidget,&nbsp;QWidget)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setToolTip"><strong>setToolTip</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setToolTip">setToolTip</a>(str)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setUpdatesEnabled"><strong>setUpdatesEnabled</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setUpdatesEnabled">setUpdatesEnabled</a>(bool)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setWhatsThis"><strong>setWhatsThis</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setWhatsThis">setWhatsThis</a>(str)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setWindowFilePath"><strong>setWindowFilePath</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setWindowFilePath">setWindowFilePath</a>(str)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setWindowFlags"><strong>setWindowFlags</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setWindowFlags">setWindowFlags</a>(Qt.WindowFlags)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setWindowIcon"><strong>setWindowIcon</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setWindowIcon">setWindowIcon</a>(QIcon)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setWindowIconText"><strong>setWindowIconText</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setWindowIconText">setWindowIconText</a>(str)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setWindowModality"><strong>setWindowModality</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setWindowModality">setWindowModality</a>(Qt.WindowModality)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setWindowModified"><strong>setWindowModified</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setWindowModified">setWindowModified</a>(bool)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setWindowOpacity"><strong>setWindowOpacity</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setWindowOpacity">setWindowOpacity</a>(float)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setWindowRole"><strong>setWindowRole</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setWindowRole">setWindowRole</a>(str)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setWindowState"><strong>setWindowState</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setWindowState">setWindowState</a>(Qt.WindowStates)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setWindowTitle"><strong>setWindowTitle</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-setWindowTitle">setWindowTitle</a>(str)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-show"><strong>show</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-show">show</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-showFullScreen"><strong>showFullScreen</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-showFullScreen">showFullScreen</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-showMaximized"><strong>showMaximized</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-showMaximized">showMaximized</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-showMinimized"><strong>showMinimized</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-showMinimized">showMinimized</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-showNormal"><strong>showNormal</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-showNormal">showNormal</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-size"><strong>size</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-size">size</a>()&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-sizeIncrement"><strong>sizeIncrement</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-sizeIncrement">sizeIncrement</a>()&nbsp;-&gt;&nbsp;QSize</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-sizePolicy"><strong>sizePolicy</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-sizePolicy">sizePolicy</a>()&nbsp;-&gt;&nbsp;QSizePolicy</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-stackUnder"><strong>stackUnder</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-stackUnder">stackUnder</a>(QWidget)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-statusTip"><strong>statusTip</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-statusTip">statusTip</a>()&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-style"><strong>style</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-style">style</a>()&nbsp;-&gt;&nbsp;QStyle</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-styleSheet"><strong>styleSheet</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-styleSheet">styleSheet</a>()&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-testAttribute"><strong>testAttribute</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-testAttribute">testAttribute</a>(Qt.WidgetAttribute)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-toolTip"><strong>toolTip</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-toolTip">toolTip</a>()&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-topLevelWidget"><strong>topLevelWidget</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-topLevelWidget">topLevelWidget</a>()&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-underMouse"><strong>underMouse</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-underMouse">underMouse</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-ungrabGesture"><strong>ungrabGesture</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-ungrabGesture">ungrabGesture</a>(Qt.GestureType)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-unsetCursor"><strong>unsetCursor</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-unsetCursor">unsetCursor</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-unsetLayoutDirection"><strong>unsetLayoutDirection</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-unsetLayoutDirection">unsetLayoutDirection</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-unsetLocale"><strong>unsetLocale</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-unsetLocale">unsetLocale</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-update"><strong>update</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-update">update</a>()<br>
+QWidget.<a href="#InformacionGrupo-update">update</a>(QRect)<br>
+QWidget.<a href="#InformacionGrupo-update">update</a>(QRegion)<br>
+QWidget.<a href="#InformacionGrupo-update">update</a>(int,&nbsp;int,&nbsp;int,&nbsp;int)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-updateGeometry"><strong>updateGeometry</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-updateGeometry">updateGeometry</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-updatesEnabled"><strong>updatesEnabled</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-updatesEnabled">updatesEnabled</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-visibleRegion"><strong>visibleRegion</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-visibleRegion">visibleRegion</a>()&nbsp;-&gt;&nbsp;QRegion</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-whatsThis"><strong>whatsThis</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-whatsThis">whatsThis</a>()&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-width"><strong>width</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-width">width</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-winId"><strong>winId</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-winId">winId</a>()&nbsp;-&gt;&nbsp;sip.voidptr</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-window"><strong>window</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-window">window</a>()&nbsp;-&gt;&nbsp;QWidget</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-windowFilePath"><strong>windowFilePath</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-windowFilePath">windowFilePath</a>()&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-windowFlags"><strong>windowFlags</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-windowFlags">windowFlags</a>()&nbsp;-&gt;&nbsp;Qt.WindowFlags</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-windowIcon"><strong>windowIcon</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-windowIcon">windowIcon</a>()&nbsp;-&gt;&nbsp;QIcon</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-windowIconText"><strong>windowIconText</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-windowIconText">windowIconText</a>()&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-windowModality"><strong>windowModality</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-windowModality">windowModality</a>()&nbsp;-&gt;&nbsp;Qt.WindowModality</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-windowOpacity"><strong>windowOpacity</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-windowOpacity">windowOpacity</a>()&nbsp;-&gt;&nbsp;float</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-windowRole"><strong>windowRole</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-windowRole">windowRole</a>()&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-windowState"><strong>windowState</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-windowState">windowState</a>()&nbsp;-&gt;&nbsp;Qt.WindowStates</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-windowTitle"><strong>windowTitle</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-windowTitle">windowTitle</a>()&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-windowType"><strong>windowType</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-windowType">windowType</a>()&nbsp;-&gt;&nbsp;Qt.WindowType</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-x"><strong>x</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-x">x</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-y"><strong>y</strong></a>(...)</dt><dd><tt>QWidget.<a href="#InformacionGrupo-y">y</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt4.QtGui.html#QWidget">PyQt4.QtGui.QWidget</a>:<br>
+<dl><dt><strong>DrawChildren</strong> = 2</dl>
+
+<dl><dt><strong>DrawWindowBackground</strong> = 1</dl>
+
+<dl><dt><strong>IgnoreMask</strong> = 4</dl>
+
+<dl><dt><strong>RenderFlag</strong> = &lt;class 'PyQt4.QtGui.QWidget.RenderFlag'&gt;</dl>
+
+<dl><dt><strong>RenderFlags</strong> = &lt;class 'PyQt4.QtGui.RenderFlags'&gt;<dd><tt>QWidget.<a href="#InformacionGrupo-RenderFlags">RenderFlags</a>(QWidget.RenderFlags)<br>
+QWidget.<a href="#InformacionGrupo-RenderFlags">RenderFlags</a>(int)<br>
+QWidget.<a href="#InformacionGrupo-RenderFlags">RenderFlags</a>()</tt></dl>
+
+<hr>
+Methods inherited from <a href="PyQt4.QtCore.html#QObject">PyQt4.QtCore.QObject</a>:<br>
+<dl><dt><a name="InformacionGrupo-__getattr__"><strong>__getattr__</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-__getattr__">__getattr__</a>(str)&nbsp;-&gt;&nbsp;object</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-blockSignals"><strong>blockSignals</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-blockSignals">blockSignals</a>(bool)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-children"><strong>children</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-children">children</a>()&nbsp;-&gt;&nbsp;list-of-QObject</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-connect"><strong>connect</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-connect">connect</a>(QObject,&nbsp;SIGNAL(),&nbsp;QObject,&nbsp;SLOT(),&nbsp;Qt.ConnectionType=Qt.AutoConnection)&nbsp;-&gt;&nbsp;bool<br>
+QObject.<a href="#InformacionGrupo-connect">connect</a>(QObject,&nbsp;SIGNAL(),&nbsp;callable,&nbsp;Qt.ConnectionType=Qt.AutoConnection)&nbsp;-&gt;&nbsp;bool<br>
+QObject.<a href="#InformacionGrupo-connect">connect</a>(QObject,&nbsp;SIGNAL(),&nbsp;SLOT(),&nbsp;Qt.ConnectionType=Qt.AutoConnection)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-deleteLater"><strong>deleteLater</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-deleteLater">deleteLater</a>()</tt></dd></dl>
+
+<strong>destroyed</strong> = &lt;unbound signal destroyed&gt;
+<dl><dt><a name="InformacionGrupo-disconnect"><strong>disconnect</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-disconnect">disconnect</a>(QObject,&nbsp;SIGNAL(),&nbsp;QObject,&nbsp;SLOT())&nbsp;-&gt;&nbsp;bool<br>
+QObject.<a href="#InformacionGrupo-disconnect">disconnect</a>(QObject,&nbsp;SIGNAL(),&nbsp;callable)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-dumpObjectInfo"><strong>dumpObjectInfo</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-dumpObjectInfo">dumpObjectInfo</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-dumpObjectTree"><strong>dumpObjectTree</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-dumpObjectTree">dumpObjectTree</a>()</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-dynamicPropertyNames"><strong>dynamicPropertyNames</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-dynamicPropertyNames">dynamicPropertyNames</a>()&nbsp;-&gt;&nbsp;list-of-QByteArray</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-emit"><strong>emit</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-emit">emit</a>(SIGNAL(),&nbsp;...)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-findChild"><strong>findChild</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-findChild">findChild</a>(type,&nbsp;str&nbsp;name='')&nbsp;-&gt;&nbsp;QObject<br>
+QObject.<a href="#InformacionGrupo-findChild">findChild</a>(tuple,&nbsp;str&nbsp;name='')&nbsp;-&gt;&nbsp;QObject</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-findChildren"><strong>findChildren</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-findChildren">findChildren</a>(type,&nbsp;str&nbsp;name='')&nbsp;-&gt;&nbsp;list-of-QObject<br>
+QObject.<a href="#InformacionGrupo-findChildren">findChildren</a>(tuple,&nbsp;str&nbsp;name='')&nbsp;-&gt;&nbsp;list-of-QObject<br>
+QObject.<a href="#InformacionGrupo-findChildren">findChildren</a>(type,&nbsp;QRegExp)&nbsp;-&gt;&nbsp;list-of-QObject<br>
+QObject.<a href="#InformacionGrupo-findChildren">findChildren</a>(tuple,&nbsp;QRegExp)&nbsp;-&gt;&nbsp;list-of-QObject</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-inherits"><strong>inherits</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-inherits">inherits</a>(str)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-installEventFilter"><strong>installEventFilter</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-installEventFilter">installEventFilter</a>(QObject)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-isWidgetType"><strong>isWidgetType</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-isWidgetType">isWidgetType</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-killTimer"><strong>killTimer</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-killTimer">killTimer</a>(int)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-metaObject"><strong>metaObject</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-metaObject">metaObject</a>()&nbsp;-&gt;&nbsp;QMetaObject</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-moveToThread"><strong>moveToThread</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-moveToThread">moveToThread</a>(QThread)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-objectName"><strong>objectName</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-objectName">objectName</a>()&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-parent"><strong>parent</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-parent">parent</a>()&nbsp;-&gt;&nbsp;QObject</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-property"><strong>property</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-property">property</a>(str)&nbsp;-&gt;&nbsp;object</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-pyqtConfigure"><strong>pyqtConfigure</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-pyqtConfigure">pyqtConfigure</a>(...)<br>
+&nbsp;<br>
+Each&nbsp;keyword&nbsp;argument&nbsp;is&nbsp;either&nbsp;the&nbsp;name&nbsp;of&nbsp;a&nbsp;Qt&nbsp;property&nbsp;or&nbsp;a&nbsp;Qt&nbsp;signal.<br>
+For&nbsp;properties&nbsp;the&nbsp;property&nbsp;is&nbsp;set&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;of&nbsp;an<br>
+appropriate&nbsp;type.<br>
+For&nbsp;signals&nbsp;the&nbsp;signal&nbsp;is&nbsp;connected&nbsp;to&nbsp;the&nbsp;given&nbsp;value&nbsp;which&nbsp;should&nbsp;be&nbsp;a<br>
+callable.</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-removeEventFilter"><strong>removeEventFilter</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-removeEventFilter">removeEventFilter</a>(QObject)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setObjectName"><strong>setObjectName</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-setObjectName">setObjectName</a>(str)</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-setProperty"><strong>setProperty</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-setProperty">setProperty</a>(str,&nbsp;object)&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-signalsBlocked"><strong>signalsBlocked</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-signalsBlocked">signalsBlocked</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-startTimer"><strong>startTimer</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-startTimer">startTimer</a>(int)&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-thread"><strong>thread</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-thread">thread</a>()&nbsp;-&gt;&nbsp;QThread</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-tr"><strong>tr</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-tr">tr</a>(str,&nbsp;str&nbsp;disambiguation=None,&nbsp;int&nbsp;n=-1)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-trUtf8"><strong>trUtf8</strong></a>(...)</dt><dd><tt>QObject.<a href="#InformacionGrupo-trUtf8">trUtf8</a>(str,&nbsp;str&nbsp;disambiguation=None,&nbsp;int&nbsp;n=-1)&nbsp;-&gt;&nbsp;str</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="PyQt4.QtCore.html#QObject">PyQt4.QtCore.QObject</a>:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="PyQt4.QtCore.html#QObject">PyQt4.QtCore.QObject</a>:<br>
+<dl><dt><strong>staticMetaObject</strong> = &lt;PyQt4.QtCore.QMetaObject object&gt;</dl>
+
+<hr>
+Methods inherited from <a href="PyQt4.QtGui.html#QPaintDevice">PyQt4.QtGui.QPaintDevice</a>:<br>
+<dl><dt><a name="InformacionGrupo-colorCount"><strong>colorCount</strong></a>(...)</dt><dd><tt>QPaintDevice.<a href="#InformacionGrupo-colorCount">colorCount</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-depth"><strong>depth</strong></a>(...)</dt><dd><tt>QPaintDevice.<a href="#InformacionGrupo-depth">depth</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-heightMM"><strong>heightMM</strong></a>(...)</dt><dd><tt>QPaintDevice.<a href="#InformacionGrupo-heightMM">heightMM</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-logicalDpiX"><strong>logicalDpiX</strong></a>(...)</dt><dd><tt>QPaintDevice.<a href="#InformacionGrupo-logicalDpiX">logicalDpiX</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-logicalDpiY"><strong>logicalDpiY</strong></a>(...)</dt><dd><tt>QPaintDevice.<a href="#InformacionGrupo-logicalDpiY">logicalDpiY</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-numColors"><strong>numColors</strong></a>(...)</dt><dd><tt>QPaintDevice.<a href="#InformacionGrupo-numColors">numColors</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-paintingActive"><strong>paintingActive</strong></a>(...)</dt><dd><tt>QPaintDevice.<a href="#InformacionGrupo-paintingActive">paintingActive</a>()&nbsp;-&gt;&nbsp;bool</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-physicalDpiX"><strong>physicalDpiX</strong></a>(...)</dt><dd><tt>QPaintDevice.<a href="#InformacionGrupo-physicalDpiX">physicalDpiX</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-physicalDpiY"><strong>physicalDpiY</strong></a>(...)</dt><dd><tt>QPaintDevice.<a href="#InformacionGrupo-physicalDpiY">physicalDpiY</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<dl><dt><a name="InformacionGrupo-widthMM"><strong>widthMM</strong></a>(...)</dt><dd><tt>QPaintDevice.<a href="#InformacionGrupo-widthMM">widthMM</a>()&nbsp;-&gt;&nbsp;int</tt></dd></dl>
+
+<hr>
+Data and other attributes inherited from <a href="PyQt4.QtGui.html#QPaintDevice">PyQt4.QtGui.QPaintDevice</a>:<br>
+<dl><dt><strong>PaintDeviceMetric</strong> = &lt;class 'PyQt4.QtGui.QPaintDevice.PaintDeviceMetric'&gt;</dl>
+
+<dl><dt><strong>PdmDepth</strong> = 6</dl>
+
+<dl><dt><strong>PdmDpiX</strong> = 7</dl>
+
+<dl><dt><strong>PdmDpiY</strong> = 8</dl>
+
+<dl><dt><strong>PdmHeight</strong> = 2</dl>
+
+<dl><dt><strong>PdmHeightMM</strong> = 4</dl>
+
+<dl><dt><strong>PdmNumColors</strong> = 5</dl>
+
+<dl><dt><strong>PdmPhysicalDpiX</strong> = 9</dl>
+
+<dl><dt><strong>PdmPhysicalDpiY</strong> = 10</dl>
+
+<dl><dt><strong>PdmWidth</strong> = 1</dl>
+
+<dl><dt><strong>PdmWidthMM</strong> = 3</dl>
+
+<hr>
+Methods inherited from <a href="sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><a name="InformacionGrupo-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="sip.html#wrappertype">sip.wrappertype</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;object.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="sip.html#simplewrapper">sip.simplewrapper</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
