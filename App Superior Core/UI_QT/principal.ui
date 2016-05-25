@@ -231,6 +231,13 @@
          </widget>
         </item>
         <item>
+         <widget class="QPushButton" name="btActualizar">
+          <property name="text">
+           <string>Actualizar</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QPushButton" name="btEliminar">
           <property name="text">
            <string>Eliminar</string>

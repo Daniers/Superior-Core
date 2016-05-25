@@ -49,6 +49,8 @@ class Principal(QtGui.QMainWindow):
         QtCore.QObject.connect(self.principal.btNuevo,QtCore.SIGNAL('clicked()'),
                             self.nuevo_grupo)
         self.principal.listaGrupos.itemClicked.connect(self.item_seleccionado)
+        QtCore.QObject.connect(self.principal.btActualizar,QtCore.SIGNAL('clicked()'),
+                            self.actualizar_tabla_grupos)
 
     def item_seleccionado(self, item):
         self.item = item
@@ -67,6 +69,7 @@ class Principal(QtGui.QMainWindow):
         if u == None:
             self.conexionDB.crear_usuario(self.usr_actual)
         else:
+            #self.cargar_datos_enviados(self.usr_actual, self.gmail_service)  # cargar datos
             self.conexionDB.act_ultimo_acceso_usr(self.usr_actual, fecha)
             self.conexionDB.act_total_emails_usr(self.usr_actual,
                                         total_mensajes)
@@ -81,10 +84,21 @@ class Principal(QtGui.QMainWindow):
 
     def nuevo_grupo(self):    # Pruebas
         nuevo = NuevoGrupo(self.conexionDB, self.usr_actual)
-        self.principal.listaGrupos.clear()
-        self.cargar_usuario_actual()
+        #nuevo.show()
 
     def llenar_tabla_grupos(self, grupos):
+        self.principal.listaGrupos.clear()
         if len(grupos) != 0:
             for item in grupos:
                 self.principal.listaGrupos.addItem(item.nombre)
+
+    def actualizar_tabla_grupos(self):
+        grupos = self.conexionDB.consultar_grupos_usuario(self.usr_actual)
+        self.llenar_tabla_grupos(grupos)
+
+    def cargar_datos_enviados(self, usuario, gmail_service):
+        grupos = self.conexionDB.consultar_grupos_usuario(usuario)
+
+        for it in grupos:
+            grp = Grupo(nombre=it.nombre)
+            self.conexionDB.guardar_enviados_usuario(usuario, grp, gmail_service)

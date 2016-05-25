@@ -33,7 +33,7 @@ class NuevoGrupo(QtGui.QDialog):
                 if ok:
                     self.accept()
                     QtGui.QMessageBox.warning(self, 'informacion', 'El grupo se'
-                    'creo exitosamente.')
+                    ' creo exitosamente.')
                 else:
                     QtGui.QMessageBox.warning(self, 'Error', 'Ocurrio un '
                       'problema al crear el grupo ' + nombre + ' vuelva a '
