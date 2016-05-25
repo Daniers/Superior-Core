@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 
 from PyQt4 import QtCore, QtGui
-#from UI_CLASSES.info_grupo import Ui_info_grupo
-#from CLASSES.grupo import Grupo
-#from CLASSES.otronodo import Otronodo
+from UI_CLASSES.info_grupo import Ui_info_grupo
+from CLASSES.grupo import Grupo
+from CLASSES.otronodo import Otronodo
+
 
 class InformacionGrupo(QtGui.QDialog):
     """
@@ -45,7 +46,7 @@ class InformacionGrupo(QtGui.QDialog):
         grupo_descripcion = self.conexionDB.consultar_grupo(self.grupo_actual)
         usuarios_grupo = self.conexionDB.consultar_usuarios_grupo(self.grupo_actual)
         self.llenar_tabla_usuarios(usuarios_grupo)
-        otro=Otronodo(usuarios=usuarios_grupo) #ejemplo para graficar los nodos, SOLO EJEMPLO
+        #otro=Otronodo(usuarios=usuarios_grupo) #ejemplo para graficar los nodos, SOLO EJEMPLO
         descripciontexto=grupo_descripcion.get_descripcion()
         self.info.txtDescripcion.setText(str(descripciontexto))
         self.info.txtGrupo.setText(str(self.nombre_grupo))

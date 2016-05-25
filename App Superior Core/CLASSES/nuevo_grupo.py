@@ -11,7 +11,6 @@ class NuevoGrupo(QtGui.QDialog):
         super(NuevoGrupo, self).__init__()
         self.conexionDB = conexionDB    # Obtenemos conexion base datos
         self.usr_actual = usuario_actual    # Obtenemos el usuario loggeado
-        print(self.usr_actual.get_email())
         self.nuevo = Ui_crear_grupo()
         self.nuevo.setupUi(self)
         QtCore.QObject.connect(self.nuevo.btCrear, QtCore.SIGNAL('clicked()'),
@@ -33,6 +32,8 @@ class NuevoGrupo(QtGui.QDialog):
                 ok = self.conexionDB.crear_grupo(nuevo_grupo, self.usr_actual)
                 if ok:
                     self.accept()
+                    QtGui.QMessageBox.warning(self, 'informacion', 'El grupo se'
+                    'creo exitosamente.')
                 else:
                     QtGui.QMessageBox.warning(self, 'Error', 'Ocurrio un '
                       'problema al crear el grupo ' + nombre + ' vuelva a '
