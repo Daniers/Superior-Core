@@ -81,7 +81,8 @@ class Principal(QtGui.QMainWindow):
 
     def nuevo_grupo(self):    # Pruebas
         nuevo = NuevoGrupo(self.conexionDB, self.usr_actual)
-        #nuevo.show()
+        self.principal.listaGrupos.clear()
+        self.cargar_usuario_actual()
 
     def llenar_tabla_grupos(self, grupos):
         if len(grupos) != 0:
