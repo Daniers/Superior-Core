@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module conexion_base_datos</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>conexion_base_datos</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/asleon/RepoIs/Superior-Core/App%20Superior%20Core/CLASSES/conexion_base_datos.py">/home/asleon/RepoIs/Superior-Core/App Superior Core/CLASSES/conexion_base_datos.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;utf-8&nbsp;-*-</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="conexion_base_datos.html#ConexionBaseDatos">ConexionBaseDatos</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ConexionBaseDatos">class <strong>ConexionBaseDatos</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Clase&nbsp;que&nbsp;conecta&nbsp;a&nbsp;la&nbsp;aplicación&nbsp;con&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.&nbsp;Incluye&nbsp;las<br>
+tareas&nbsp;normales&nbsp;de&nbsp;CRUD&nbsp;(Crear,&nbsp;Leer,&nbsp;Actualizar,&nbsp;Eliminar)<br>
+&nbsp;<br>
+Attributes:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;graph&nbsp;(Graph):&nbsp;Objeto&nbsp;de&nbsp;la&nbsp;clase&nbsp;Py2Neo,&nbsp;que&nbsp;nos&nbsp;permite&nbsp;el&nbsp;acceso<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos&nbsp;para&nbsp;la&nbsp;realización&nbsp;de&nbsp;consultas.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="ConexionBaseDatos-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="ConexionBaseDatos-act_total_emails_usr"><strong>act_total_emails_usr</strong></a>(self, usuario, total_emails)</dt><dd><tt>Permite&nbsp;la&nbsp;actualización&nbsp;de&nbsp;la&nbsp;propiedad&nbsp;del&nbsp;usuario&nbsp;relativa&nbsp;a&nbsp;la<br>
+cantidad&nbsp;de&nbsp;emails&nbsp;en&nbsp;su&nbsp;cuenta&nbsp;de&nbsp;correo&nbsp;de&nbsp;Gmail.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;usuario(Usuario):&nbsp;Objeto&nbsp;de&nbsp;tipo&nbsp;Usuario,&nbsp;del&nbsp;cual&nbsp;se&nbsp;obtiene<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;email&nbsp;y&nbsp;se&nbsp;actualiza&nbsp;la&nbsp;propiedad&nbsp;total_emails.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;total_emails(integer):&nbsp;Número&nbsp;Entero,&nbsp;hace&nbsp;referencia&nbsp;al&nbsp;total<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;de&nbsp;emails&nbsp;en&nbsp;la&nbsp;cuenta&nbsp;de&nbsp;Gmail.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;boolean:&nbsp;True,&nbsp;actualización&nbsp;exitosa.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;False,&nbsp;no&nbsp;se&nbsp;completa&nbsp;la&nbsp;operación.</tt></dd></dl>
+
+<dl><dt><a name="ConexionBaseDatos-act_ultimo_acceso_usr"><strong>act_ultimo_acceso_usr</strong></a>(self, usuario, ultimo_acceso)</dt><dd><tt>Permite&nbsp;la&nbsp;actualización&nbsp;de&nbsp;la&nbsp;propiedad&nbsp;del&nbsp;usuario&nbsp;relativa&nbsp;al<br>
+ultimo_acceso&nbsp;llevado&nbsp;a&nbsp;cabo&nbsp;por&nbsp;el&nbsp;usuario&nbsp;en&nbsp;la&nbsp;aplicación.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;usuario(Usuario):&nbsp;Objeto&nbsp;de&nbsp;tipo&nbsp;Usuario,&nbsp;del&nbsp;cual&nbsp;se&nbsp;obtiene<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;email&nbsp;y&nbsp;se&nbsp;actualiza&nbsp;la&nbsp;propiedad&nbsp;ultimo_acceso.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ultimo_acceso(string):&nbsp;Hace&nbsp;referencia&nbsp;a&nbsp;la&nbsp;fecha&nbsp;del&nbsp;ultimo<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;acceso&nbsp;a&nbsp;la&nbsp;aplicación.&nbsp;Toma&nbsp;el&nbsp;formato&nbsp;AAAA/MM/DD.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;boolean:&nbsp;True,&nbsp;actualización&nbsp;exitosa.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;False,&nbsp;no&nbsp;se&nbsp;completa&nbsp;la&nbsp;operación.</tt></dd></dl>
+
+<dl><dt><a name="ConexionBaseDatos-consultar_grupo"><strong>consultar_grupo</strong></a>(self, grupo)</dt><dd><tt>Permite&nbsp;consultar&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos,&nbsp;por&nbsp;un&nbsp;grupo&nbsp;específico&nbsp;y&nbsp;sus<br>
+datos.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;grupo(Grupo):&nbsp;Objeto&nbsp;de&nbsp;tipo&nbsp;Grupo,&nbsp;del&nbsp;que&nbsp;se&nbsp;obtiene&nbsp;el<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nombre&nbsp;del&nbsp;grupo.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;g(Grupo):&nbsp;Objeto&nbsp;de&nbsp;tipo&nbsp;grupo&nbsp;en&nbsp;caso&nbsp;de&nbsp;que&nbsp;exista&nbsp;el&nbsp;grupo,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;de&nbsp;lo&nbsp;contrario&nbsp;retorna&nbsp;None&nbsp;(Null).</tt></dd></dl>
+
+<dl><dt><a name="ConexionBaseDatos-consultar_grupos_usuario"><strong>consultar_grupos_usuario</strong></a>(self, usuario)</dt><dd><tt>Permite&nbsp;consultar&nbsp;todos&nbsp;los&nbsp;grupos&nbsp;a&nbsp;los&nbsp;que&nbsp;pertenece&nbsp;un&nbsp;usuario<br>
+determinado.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;usuario(Usuario):&nbsp;Objeto&nbsp;de&nbsp;tipo&nbsp;Usuario,&nbsp;del&nbsp;cual&nbsp;se&nbsp;obtiene<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;email&nbsp;del&nbsp;usuario.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;grupos(list&lt;string&gt;):&nbsp;Lista&nbsp;que&nbsp;contiene&nbsp;los&nbsp;nombres&nbsp;de&nbsp;los<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grupos&nbsp;a&nbsp;los&nbsp;cuales&nbsp;pertenece&nbsp;el&nbsp;usuario.</tt></dd></dl>
+
+<dl><dt><a name="ConexionBaseDatos-consultar_usuario"><strong>consultar_usuario</strong></a>(self, usuario)</dt><dd><tt>Permite&nbsp;consultar&nbsp;a&nbsp;la&nbsp;base&nbsp;de&nbsp;datos,&nbsp;por&nbsp;un&nbsp;usuario&nbsp;específico&nbsp;y<br>
+sus&nbsp;datos.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;usuario(Usuario):&nbsp;Objeto&nbsp;de&nbsp;tipo&nbsp;Usuario,&nbsp;del&nbsp;cual&nbsp;se&nbsp;obtiene<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;email&nbsp;del&nbsp;usuario.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;u(Usuario):&nbsp;Objeto&nbsp;de&nbsp;tipo&nbsp;Usuario&nbsp;en&nbsp;caso&nbsp;de&nbsp;que&nbsp;exista&nbsp;el<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grupo,&nbsp;de&nbsp;lo&nbsp;contrario&nbsp;retorna&nbsp;None&nbsp;(Null).</tt></dd></dl>
+
+<dl><dt><a name="ConexionBaseDatos-consultar_usuarios_grupo"><strong>consultar_usuarios_grupo</strong></a>(self, grupo)</dt><dd><tt>Permite&nbsp;consultar&nbsp;todos&nbsp;los&nbsp;usuarios&nbsp;que&nbsp;pertenecen&nbsp;a&nbsp;un&nbsp;grupo<br>
+determinado.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;grupo(Grupo):&nbsp;Objeto&nbsp;de&nbsp;tipo&nbsp;Grupo,&nbsp;del&nbsp;cual&nbsp;se&nbsp;obtiene<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;nombre&nbsp;del&nbsp;grupo.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;usuarios(list&lt;string&gt;):&nbsp;Lista&nbsp;que&nbsp;contiene&nbsp;los&nbsp;emails&nbsp;de&nbsp;los<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usuarios&nbsp;pertenecientes&nbsp;al&nbsp;grupo.</tt></dd></dl>
+
+<dl><dt><a name="ConexionBaseDatos-crear_grupo"><strong>crear_grupo</strong></a>(self, grupo, usuario)</dt><dd><tt>Crea&nbsp;un&nbsp;grupo&nbsp;nuevo&nbsp;e&nbsp;inmediatamente&nbsp;relaciona&nbsp;al&nbsp;usuario&nbsp;de&nbsp;la<br>
+sesión&nbsp;activa&nbsp;como&nbsp;propietario&nbsp;del&nbsp;grupo.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;grupo(Grupo):&nbsp;Objeto&nbsp;de&nbsp;tipo&nbsp;Grupo,&nbsp;del&nbsp;cual&nbsp;se&nbsp;obtiene<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;nombre&nbsp;del&nbsp;grupo.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;usuario(Usuario):&nbsp;Objeto&nbsp;de&nbsp;tipo&nbsp;Usuario,&nbsp;del&nbsp;cual&nbsp;se&nbsp;obtiene<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;email&nbsp;del&nbsp;usuario.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;boolean:&nbsp;True,&nbsp;en&nbsp;caso&nbsp;de&nbsp;que&nbsp;el&nbsp;grupo&nbsp;sea&nbsp;creado&nbsp;con&nbsp;éxito.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;False,&nbsp;en&nbsp;caso&nbsp;de&nbsp;que&nbsp;el&nbsp;grupo&nbsp;no&nbsp;sea&nbsp;creado.</tt></dd></dl>
+
+<dl><dt><a name="ConexionBaseDatos-crear_rel_usuario_grupo"><strong>crear_rel_usuario_grupo</strong></a>(self, usuario, grupo, tipo)</dt><dd><tt>Permite&nbsp;crear&nbsp;la&nbsp;relación&nbsp;de&nbsp;un&nbsp;usuario&nbsp;determinado&nbsp;con&nbsp;un&nbsp;grupo<br>
+específico.&nbsp;La&nbsp;relación&nbsp;se&nbsp;nombra&nbsp;EN_GRUPO&nbsp;y&nbsp;contiene&nbsp;el&nbsp;atributo<br>
+tipo:&nbsp;P|M&nbsp;,&nbsp;que&nbsp;toma&nbsp;los&nbsp;valores&nbsp;P:Propietario&nbsp;ó&nbsp;M:Miembro.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;usuario(Usuario):&nbsp;Objeto&nbsp;de&nbsp;tipo&nbsp;Usuario,&nbsp;del&nbsp;cual&nbsp;se&nbsp;obtienen<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c/u&nbsp;de&nbsp;los&nbsp;datos,&nbsp;accediendo&nbsp;a&nbsp;los&nbsp;atributos&nbsp;del&nbsp;mismo.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;grupo(Grupo):&nbsp;Objeto&nbsp;de&nbsp;tipo&nbsp;Grupo,&nbsp;del&nbsp;cual&nbsp;se&nbsp;obtiene<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;el&nbsp;nombre&nbsp;del&nbsp;grupo.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;tipo(string):&nbsp;Específica&nbsp;el&nbsp;tipo&nbsp;de&nbsp;relación&nbsp;con&nbsp;el&nbsp;grupo,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P:&nbsp;Propietario&nbsp;ó&nbsp;M:&nbsp;Miembro.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;boolean:&nbsp;True,&nbsp;creación&nbsp;exitosa.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;False,&nbsp;no&nbsp;se&nbsp;completa&nbsp;la&nbsp;operación.</tt></dd></dl>
+
+<dl><dt><a name="ConexionBaseDatos-crear_usuario"><strong>crear_usuario</strong></a>(self, usuario)</dt><dd><tt>Crea&nbsp;un&nbsp;nuevo&nbsp;usuario&nbsp;dentro&nbsp;de&nbsp;la&nbsp;base&nbsp;de&nbsp;datos.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;usuario(Usuario):&nbsp;Objeto&nbsp;de&nbsp;tipo&nbsp;Usuario,&nbsp;del&nbsp;cual&nbsp;se&nbsp;obtienen<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c/u&nbsp;de&nbsp;los&nbsp;datos,&nbsp;accediendo&nbsp;a&nbsp;los&nbsp;atributos&nbsp;del&nbsp;mismo.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;boolean:&nbsp;True,&nbsp;creación&nbsp;exitosa.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;False,&nbsp;no&nbsp;se&nbsp;completa&nbsp;la&nbsp;operación.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>PATH_BASE_DATOS</strong> = 'http://superiorcore:71ZRUSThCdIOO5MYikj1@superiorcore.sb02.stations.graphenedb.com:24789/db/data/'</td></tr></table>
+</body></html>

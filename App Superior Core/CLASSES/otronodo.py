@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import networkx as nx
-import matplotlib.pyplot as plt
+#import networkx as nx
+#import matplotlib.pyplot as plt
 from PyQt4 import QtCore, QtGui
 from UI_CLASSES.info_grupo import Ui_info_grupo
 

@@ -4,7 +4,10 @@ from PyQt4 import QtCore, QtGui
 from UI_CLASSES.info_grupo import Ui_info_grupo
 from CLASSES.grupo import Grupo
 from CLASSES.otronodo import Otronodo
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2e60920c69433b8232a1a7b4bbc21297d3e6b1ce
 
 class InformacionGrupo(QtGui.QDialog):
     """
