@@ -6,8 +6,6 @@ from CLASSES.grupo import Grupo
 from CLASSES.otronodo import Otronodo
 from CLASSES.ingresar_integrante import IngresarIntegrante
 
-#debug
-from CLASSES.usuario import Usuario
 
 class InformacionGrupo(QtGui.QDialog):
     """

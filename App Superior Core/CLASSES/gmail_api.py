@@ -8,19 +8,20 @@ class GmailAPI():
         super(GmailAPI, self).__init__()
 
     def ListMessagesMatchingQuery(self,service, user_id, query=''):
-        """List all Messages of the user's mailbox matching the query.
+        """
+            List all Messages of the user's mailbox matching the query.
 
-        Args:
-            service: Authorized Gmail API service instance.
-            user_id: User's email address. The special value "me"
-            can be used to indicate the authenticated user.
-            query: String used to filter messages returned.
-            Eg.- 'from:user@some_domain.com' for Messages from a particular sender.
+            Args:
+                service: Authorized Gmail API service instance.
+                user_id: User's email address. The special value "me"
+                can be used to indicate the authenticated user.
+                query: String used to filter messages returned.
+                Eg.- 'from:user@some_domain.com' for Messages from a particular sender.
 
-        Returns:
-            List of Messages that match the criteria of the query. Note that the
-            returned list contains Message IDs, you must use get with the
-            appropriate ID to get the details of a Message.
+            Returns:
+                List of Messages that match the criteria of the query. Note that the
+                returned list contains Message IDs, you must use get with the
+                appropriate ID to get the details of a Message.
         """
         try:
             response = service.users().messages().list(userId=user_id,

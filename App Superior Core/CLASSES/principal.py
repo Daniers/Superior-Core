@@ -70,7 +70,7 @@ class Principal(QtGui.QMainWindow):
         if u == None:
             self.conexionDB.crear_usuario(self.usr_actual)
         else:
-            #self.cargar_datos_enviados(self.usr_actual, self.gmail_service)  # cargar datos
+            self.cargar_datos_enviados(self.usr_actual, self.gmail_service)  # cargar datos
             self.conexionDB.act_ultimo_acceso_usr(self.usr_actual, fecha)
             self.conexionDB.act_total_emails_usr(self.usr_actual,
                                         total_mensajes)
