@@ -4,6 +4,7 @@ from PyQt4 import QtCore, QtGui
 from UI_CLASSES.info_grupo import Ui_info_grupo
 from CLASSES.grupo import Grupo
 from CLASSES.otronodo import Otronodo
+from CLASSES.ingresar_integrante import IngresarIntegrante
 
 #debug
 from CLASSES.usuario import Usuario
@@ -23,16 +24,35 @@ class InformacionGrupo(QtGui.QDialog):
             grupo_actual(Grupo): Objeto que envia los datos actuales del grupo
                                         a la clase grupo y manejar los setters y getters de esta.
     """
-    def __init__(self, conexionDB, nombre_grupo,usuario_actual):
+    def __init__(self, conexionDB, nombre_grupo,usuario_actual,aux):
         super(InformacionGrupo, self).__init__()
         self.info = Ui_info_grupo()
         self.info.setupUi(self)
         self.conexionDB=conexionDB
         self.nombre_grupo=nombre_grupo
         self.usuario_actual=usuario_actual
+        self.aux=aux
         self.grupo_actual=None
         self.llenar_datos_grupo()
+        self.listeners()
+#        self.permisos_crud()
         self.exec_()
+
+    def permisos_crud(self):
+        if self.aux is False:
+            self.info.btAgregar.setEnabled(False)
+            self.info.bteliminarintegrante.setEnabled(False)
+
+
+    def listeners(self):
+        QtCore.QObject.connect(self.info.btAgregar,QtCore.SIGNAL('clicked()'),
+                            self.Agregar_integrante)
+
+    def Agregar_integrante(self):
+        agregar = IngresarIntegrante(self.grupo_actual, self.conexionDB)
+        self.info.listIntegrantes.clear()
+        self.llenar_datos_grupo()
+
 
     def llenar_datos_grupo(self):
         """

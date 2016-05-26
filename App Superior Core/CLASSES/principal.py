@@ -38,6 +38,7 @@ class Principal(QtGui.QMainWindow):
         self.gmail_service = permisos
         self.item_nombre = ""
         self.usr_actual = None
+        self.grupo_actual = None
         self.conexionDB = ConexionBaseDatos()    # Creamos una conexion DB
         self.conectarSlots()    # Funcion que conecta las funciones
         self.cargar_usuario_actual()
@@ -80,7 +81,9 @@ class Principal(QtGui.QMainWindow):
         self.principal.lb_total.setText(str(self.usr_actual.get_total_emails()))
 
     def info_grupo(self):
-        info = InformacionGrupo(self.conexionDB,self.item_nombre,self.usr_actual.get_email())
+        self.grupo_actual = Grupo(nombre=self.item_nombre, descripcion="")
+        aux=self.conexionDB.consultar_propietario_grupo(self.usr_actual,self.grupo_actual)
+        info = InformacionGrupo(self.conexionDB,self.item_nombre,self.usr_actual.get_email(),aux)
 
     def nuevo_grupo(self):    # Pruebas
         nuevo = NuevoGrupo(self.conexionDB, self.usr_actual)

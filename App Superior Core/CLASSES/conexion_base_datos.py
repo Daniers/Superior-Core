@@ -78,6 +78,7 @@ class ConexionBaseDatos():
 
         return u    # Retorna el usuario
 
+
     def consultar_grupos_usuario(self, usuario):
         """
             Permite consultar todos los grupos a los que pertenece un usuario
@@ -332,7 +333,7 @@ class ConexionBaseDatos():
         else:
             for it in lista_emails:
                 if it.email == usuario_tmp.get_email():
-                    return
+                    return True
 
         self.crear_rel_usuario_grupo(nuevo_usuario, grupo, "M")
 
