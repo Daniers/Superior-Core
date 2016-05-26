@@ -66,4 +66,3 @@ class Ui_ingresar_integrante(object):
         self.btCancelar.setText(_translate("ingresar_integrante", "Cancelar", None))
         self.label.setText(_translate("ingresar_integrante", "Correo:", None))
 
-

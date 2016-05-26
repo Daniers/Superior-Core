@@ -183,31 +183,6 @@ class ConexionBaseDatos():
         except:
             return False
 
-    def consultar_enviados_usuario(self, usuario, grupo):
-        id_usr = "usr" + str(self.consultar_id_usuario(usuario))
-        lista_usr = self.consultar_usuarios_grupo(grupo)
-        id_usr2 = ""
-        user_tmp = None
-        datos = []
-
-        for it in lista_usr:
-            if it.email != usuario.get_email():
-                user_tmp = Usuario(it.email)
-                id_usr2 = "usr" + str(self.consultar_id_usuario(user_tmp))
-
-                consulta = ("MATCH (u:Usuario{email:{E}}), (u2:Usuario{email:{E2}}),"
-                    "(u)-[r:COM]-(u2) RETURN u2.email AS email, r." + id_usr2 +
-                    " AS env, r." + id_usr + " AS rec")
-                try:
-                    res = self.graph.cypher.execute(consulta, {'E': usuario.get_email(),
-                            'E2': it.email})
-
-                    datos.append((res[0].email, res[0].env, res[0].rec))
-                except:
-                    return -1
-
-        return datos
-
     def crear_grupo(self, grupo, usuario):
         """
             Crea un grupo nuevo e inmediatamente relaciona al usuario de la
@@ -355,10 +330,11 @@ class ConexionBaseDatos():
 
         if usuario_tmp is None:
             self.crear_usuario(nuevo_usuario)
+            return True
         else:
             for it in lista_emails:
                 if it.email == usuario_tmp.get_email():
-                    return True
+                    return False
 
         self.crear_rel_usuario_grupo(nuevo_usuario, grupo, "M")
 
@@ -394,22 +370,20 @@ class ConexionBaseDatos():
         gmail_api = GmailAPI()    # Objeto de tipo GmailAPI
         query = ""  # Variable Temporal consulta a gmail api
         total = 0  # Var. guarda el total enviados a un usuario
-        #fecha = dt.datetime.now().strftime("%Y/%m/%d")
+        fecha = dt.datetime.now().strftime("%Y/%m/%d")
 
         for it in lista_usr_grp:
             if usuario.get_email() != it.email:
-                #query = 'to:' + it.email + ' after:' + ultimo_acceso
-                #query = str('to:' + it.email)
-                query = str('in:sent ' + it.email)
+                query = 'to:' + it.email + ' after:' + ultimo_acceso
+                print (query)
                 usr_tmp = Usuario(email=it.email)    # Usuario Temporal
                 id_usr = "usr" + str(self.consultar_id_usuario(usr_tmp))
-                emails_sent = gmail_api.ListMessagesMatchingQuery(gmail_service,
-                        'me', query)
+                emails_sent = gmail_api.ListMessagesMatchingQuery(gmail_service,'me', query)
                 total = len(emails_sent)
 
                 # Consulta para guardar en la base de datos
                 consulta = ("MATCH (u:Usuario{email:{E}}), (u2:Usuario{email:{E2}}),"
-                    "(u)-[r:COM]-(u2) SET r." + id_usr + "={T}")
+                    "(u)-[r:COM]-(u2) SET r." + id_usr + "=r." + id_usr + "+{T}")
 
                 self.graph.cypher.execute(consulta, {'E': usuario.get_email(),
                         'E2': it.email, 'T': total})

@@ -5,7 +5,7 @@ from UI_CLASSES.info_grupo import Ui_info_grupo
 from CLASSES.grupo import Grupo
 from CLASSES.otronodo import Otronodo
 from CLASSES.ingresar_integrante import IngresarIntegrante
-
+from CLASSES.usuario import Usuario
 
 class InformacionGrupo(QtGui.QDialog):
     """
@@ -30,10 +30,12 @@ class InformacionGrupo(QtGui.QDialog):
         self.nombre_grupo=nombre_grupo
         self.usuario_actual=usuario_actual
         self.aux=aux
+        self.item_integrante = ""
+        self.eliminar_seleccionado=None
         self.grupo_actual=None
         self.llenar_datos_grupo()
         self.listeners()
-#        self.permisos_crud()
+        self.permisos_crud() #Permisos para eliminar y agregar
         self.exec_()
 
     def permisos_crud(self):
@@ -45,6 +47,21 @@ class InformacionGrupo(QtGui.QDialog):
     def listeners(self):
         QtCore.QObject.connect(self.info.btAgregar,QtCore.SIGNAL('clicked()'),
                             self.Agregar_integrante)
+        self.info.listIntegrantes.itemClicked.connect(self.item_seleccionado)
+        QtCore.QObject.connect(self.info.bteliminarintegrante,QtCore.SIGNAL('clicked()'),
+                            self.Eliminar_integrante)
+
+
+    def item_seleccionado(self,item):
+        self.item = item
+        self.item_integrante = item.text()
+
+    def Eliminar_integrante(self):
+        eliminar_seleccionado=Usuario(email=self.item_seleccionado,ultimo_acceso="", total_emails=0)
+        aux = self.conexionDB.eliminar_usuario_grupo(self.eliminar_seleccionado,self.grupo_actual)
+        print(self.grupo_actual.get_nombre())
+        self.info.listIntegrantes.clear()
+        self.llenar_datos_grupo()
 
     def Agregar_integrante(self):
         agregar = IngresarIntegrante(self.grupo_actual, self.conexionDB)
