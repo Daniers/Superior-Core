@@ -5,8 +5,6 @@ from UI_CLASSES.info_grupo import Ui_info_grupo
 from CLASSES.grupo import Grupo
 from CLASSES.otronodo import Otronodo
 
-#debug
-from CLASSES.usuario import Usuario
 
 class InformacionGrupo(QtGui.QDialog):
     """
