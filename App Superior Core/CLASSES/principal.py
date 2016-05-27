@@ -86,10 +86,11 @@ class Principal(QtGui.QMainWindow):
         self.grupo_actual = Grupo(nombre=self.item_nombre, descripcion="")
         aux=self.conexionDB.consultar_propietario_grupo(self.usr_actual,self.grupo_actual)
         info = InformacionGrupo(self.conexionDB,self.item_nombre,self.usr_actual.get_email(),aux)
+        self.actualizar_tabla_grupos()
 
     def nuevo_grupo(self):    # Pruebas
         nuevo = NuevoGrupo(self.conexionDB, self.usr_actual)
-        #nuevo.show()
+        self.actualizar_tabla_grupos()
 
     def llenar_tabla_grupos(self, grupos):
         self.principal.listaGrupos.clear()
