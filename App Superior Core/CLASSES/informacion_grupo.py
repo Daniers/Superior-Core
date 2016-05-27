@@ -35,7 +35,7 @@ class InformacionGrupo(QtGui.QDialog):
         self.grupo_actual=None
         self.llenar_datos_grupo()
         self.listeners()
-        self.permisos_crud() #Permisos para eliminar y agregar
+#        self.permisos_crud() #Permisos para eliminar y agregar
         self.exec_()
 
     def permisos_crud(self):
@@ -57,9 +57,10 @@ class InformacionGrupo(QtGui.QDialog):
         self.item_integrante = item.text()
 
     def Eliminar_integrante(self):
-        eliminar_seleccionado=Usuario(email=self.item_seleccionado,ultimo_acceso="", total_emails=0)
+        eliminar_seleccionado=Usuario(email=self.item_integrante,ultimo_acceso="", total_emails=0)
         aux = self.conexionDB.eliminar_usuario_grupo(self.eliminar_seleccionado,self.grupo_actual)
-        print(self.grupo_actual.get_nombre())
+        print(self.item_integrante)#pruebas
+        print(aux)#pruebas
         self.info.listIntegrantes.clear()
         self.llenar_datos_grupo()
 
