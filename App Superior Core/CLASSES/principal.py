@@ -105,3 +105,9 @@ class Principal(QtGui.QMainWindow):
         for it in grupos:
             grp = Grupo(nombre=it.nombre)
             self.conexionDB.guardar_enviados_usuario(usuario, grp, gmail_service)
+
+    def eliminar_grupo(self):
+        grp = Grupo(self.item_nombre)
+        usr = Usuario(self.usr_actual)
+
+
