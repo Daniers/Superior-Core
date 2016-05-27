@@ -51,16 +51,28 @@ class InformacionGrupo(QtGui.QDialog):
         self.info.listIntegrantes.itemClicked.connect(self.item_seleccionado)
         QtCore.QObject.connect(self.info.bteliminarintegrante,QtCore.SIGNAL('clicked()'),
                             self.Eliminar_integrante)
-
+        QtCore.QObject.connect(self.info.btAbandonargrupo,QtCore.SIGNAL('clicked()'),
+                            self.Abandonar_grupo)
+        QtCore.QObject.connect(self.info.btdiagramabarras,QtCore.SIGNAL('clicked()'),
+                            self.Diagrama_barras)
+        QtCore.QObject.connect(self.info.btenviados,QtCore.SIGNAL('clicked()'),
+                            self.Enviados)
+        QtCore.QObject.connect(self.info.btrecibidos,QtCore.SIGNAL('clicked()'),
+                            self.Recibidos)
 
     def item_seleccionado(self,item):
         self.item = item
         self.item_integrante = item.text()
 
     def Eliminar_integrante(self):
-        eliminar_seleccionado=Usuario(email=self.item_seleccionado,ultimo_acceso="", total_emails=0)
+        self.eliminar_seleccionado=Usuario(email=self.item_integrante,ultimo_acceso="", total_emails=0)
         aux = self.conexionDB.eliminar_usuario_grupo(self.eliminar_seleccionado,self.grupo_actual)
-        print(self.grupo_actual.get_nombre())
+        self.info.listIntegrantes.clear()
+        self.llenar_datos_grupo()
+
+    def Abandonar_grupo(self):
+        abandonar=Usuario(email=self.usuario_actual,ultimo_acceso="", total_emails=0)
+        aux = self.conexionDB.eliminar_usuario_grupo(abandonar,self.grupo_actual)
         self.info.listIntegrantes.clear()
         self.llenar_datos_grupo()
 
@@ -68,6 +80,21 @@ class InformacionGrupo(QtGui.QDialog):
         agregar = IngresarIntegrante(self.grupo_actual, self.conexionDB)
         self.info.listIntegrantes.clear()
         self.llenar_datos_grupo()
+
+    def Diagrama_barras(self):
+        barras=Usuario(email=self.item_integrante,ultimo_acceso="", total_emails=0)
+        aux = self.conexionDB.consultar_enviados_usuario(barras,self.grupo_actual)
+        m=Graficos.DiagramaDeBarras(aux)
+
+    def Enviados(self):
+        enviados=Usuario(email=self.item_integrante,ultimo_acceso="", total_emails=0)
+        aux = self.conexionDB.consultar_enviados_usuario(enviados,self.grupo_actual)
+        m=Graficos.graficaEnviados(aux)
+
+    def Recibidos(self):
+        recibidos=Usuario(email=self.item_integrante,ultimo_acceso="", total_emails=0)
+        aux = self.conexionDB.consultar_enviados_usuario(recibidos,self.grupo_actual)
+        m=Graficos.graficaRecibidos(aux)
 
 
     def llenar_datos_grupo(self):
