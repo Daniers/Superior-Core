@@ -55,6 +55,10 @@ class InformacionGrupo(QtGui.QDialog):
                             self.Abandonar_grupo)
         QtCore.QObject.connect(self.info.btdiagramabarras,QtCore.SIGNAL('clicked()'),
                             self.Diagrama_barras)
+        QtCore.QObject.connect(self.info.btenviados,QtCore.SIGNAL('clicked()'),
+                            self.Enviados)
+        QtCore.QObject.connect(self.info.btrecibidos,QtCore.SIGNAL('clicked()'),
+                            self.Recibidos)
 
     def item_seleccionado(self,item):
         self.item = item
@@ -78,9 +82,19 @@ class InformacionGrupo(QtGui.QDialog):
         self.llenar_datos_grupo()
 
     def Diagrama_barras(self):
-        diagrama=Usuario(email=self.item_integrante,ultimo_acceso="", total_emails=0)
-        aux = self.conexionDB.consultar_enviados_usuario(diagrama,self.grupo_actual)
+        barras=Usuario(email=self.item_integrante,ultimo_acceso="", total_emails=0)
+        aux = self.conexionDB.consultar_enviados_usuario(barras,self.grupo_actual)
         m=Graficos.DiagramaDeBarras(aux)
+
+    def Enviados(self):
+        enviados=Usuario(email=self.item_integrante,ultimo_acceso="", total_emails=0)
+        aux = self.conexionDB.consultar_enviados_usuario(enviados,self.grupo_actual)
+        m=Graficos.graficaEnviados(aux)
+
+    def Recibidos(self):
+        recibidos=Usuario(email=self.item_integrante,ultimo_acceso="", total_emails=0)
+        aux = self.conexionDB.consultar_enviados_usuario(recibidos,self.grupo_actual)
+        m=Graficos.graficaRecibidos(aux)
 
 
     def llenar_datos_grupo(self):
