@@ -3,7 +3,7 @@
 from PyQt4 import QtCore, QtGui
 from UI_CLASSES.info_grupo import Ui_info_grupo
 from CLASSES.grupo import Grupo
-from CLASSES.otronodo import Otronodo
+from CLASSES.graficos import Graficos
 from CLASSES.ingresar_integrante import IngresarIntegrante
 from CLASSES.usuario import Usuario
 
@@ -26,6 +26,7 @@ class InformacionGrupo(QtGui.QDialog):
         super(InformacionGrupo, self).__init__()
         self.info = Ui_info_grupo()
         self.info.setupUi(self)
+        self.graficos = Graficos()    # Objeto para graficar
         self.conexionDB=conexionDB
         self.nombre_grupo=nombre_grupo
         self.usuario_actual=usuario_actual
@@ -35,7 +36,7 @@ class InformacionGrupo(QtGui.QDialog):
         self.grupo_actual=None
         self.llenar_datos_grupo()
         self.listeners()
-#        self.permisos_crud() #Permisos para eliminar y agregar
+        self.permisos_crud() #Permisos para eliminar y agregar
         self.exec_()
 
     def permisos_crud(self):
@@ -57,10 +58,9 @@ class InformacionGrupo(QtGui.QDialog):
         self.item_integrante = item.text()
 
     def Eliminar_integrante(self):
-        eliminar_seleccionado=Usuario(email=self.item_integrante,ultimo_acceso="", total_emails=0)
+        eliminar_seleccionado=Usuario(email=self.item_seleccionado,ultimo_acceso="", total_emails=0)
         aux = self.conexionDB.eliminar_usuario_grupo(self.eliminar_seleccionado,self.grupo_actual)
-        print(self.item_integrante)#pruebas
-        print(aux)#pruebas
+        print(self.grupo_actual.get_nombre())
         self.info.listIntegrantes.clear()
         self.llenar_datos_grupo()
 
