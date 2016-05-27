@@ -52,6 +52,8 @@ class Principal(QtGui.QMainWindow):
         self.principal.listaGrupos.itemClicked.connect(self.item_seleccionado)
         QtCore.QObject.connect(self.principal.btActualizar,QtCore.SIGNAL('clicked()'),
                             self.actualizar_tabla_grupos)
+        QtCore.QObject.connect(self.principal.btEliminar,QtCore.SIGNAL('clicked()'),
+                            self.eliminar_grp)
 
     def item_seleccionado(self, item):
         self.item = item
@@ -105,3 +107,27 @@ class Principal(QtGui.QMainWindow):
         for it in grupos:
             grp = Grupo(nombre=it.nombre)
             self.conexionDB.guardar_enviados_usuario(usuario, grp, gmail_service)
+
+    def eliminar_grp(self):
+        grp = Grupo(self.item_nombre)
+        res = self.conexionDB.consultar_propietario_grupo(self.usr_actual, grp)
+
+        usr_tmp = None
+        lista_usr = []
+
+        if res == True:
+            lista_usr = self.conexionDB.consultar_usuarios_grupo(grp)
+
+            for it in lista_usr:
+                usr_tmp = Usuario(it.email)
+                self.conexionDB.eliminar_usuario_grupo(usr_tmp, grp)
+
+            self.conexionDB.eliminar_grupo(grp)
+            self.actualizar_tabla_grupos()
+        else:
+            QtGui.QMessageBox.warning(self, 'Error', 'Error al Eliminar'
+                    ' grupo, usted no es el propietario.')
+
+
+
+

@@ -1,5 +1,4 @@
-# -*- coding: utf-8 -*-
-
+# -*- coding:utf-8 -*-
 from py2neo import Graph, Node, Relationship, Path
 from py2neo import authenticate
 from CLASSES.usuario import Usuario
@@ -18,7 +17,6 @@ class ConexionBaseDatos():
     """
         Clase que conecta a la aplicación con la base de datos. Incluye las
         tareas normales de CRUD (Crear, Leer, Actualizar, Eliminar)
-
         Attributes:
             graph (Graph): Objeto de la clase Py2Neo, que nos permite el acceso
                            a la base de datos para la realización de consultas.
@@ -33,11 +31,9 @@ class ConexionBaseDatos():
         """
             Permite consultar a la base de datos, por un grupo específico y sus
             datos.
-
             Args:
                 grupo(Grupo): Objeto de tipo Grupo, del que se obtiene el
                     nombre del grupo.
-
             Returns:
                 g(Grupo): Objeto de tipo grupo en caso de que exista el grupo,
                     de lo contrario retorna None (Null).
@@ -57,11 +53,9 @@ class ConexionBaseDatos():
         """
             Permite consultar a la base de datos, por un usuario específico y
             sus datos.
-
             Args:
                 usuario(Usuario): Objeto de tipo Usuario, del cual se obtiene
                     el email del usuario.
-
             Returns:
                 u(Usuario): Objeto de tipo Usuario en caso de que exista el
                     usuario, de lo contrario retorna None (Null).
@@ -78,16 +72,13 @@ class ConexionBaseDatos():
 
         return u    # Retorna el usuario
 
-
     def consultar_grupos_usuario(self, usuario):
         """
             Permite consultar todos los grupos a los que pertenece un usuario
             determinado.
-
             Args:
                 usuario(Usuario): Objeto de tipo Usuario, del cual se obtiene
                     el email del usuario.
-
             Returns:
                 grupos(list<string>): Lista que contiene los nombres de los
                     grupos a los cuales pertenece el usuario.
@@ -106,11 +97,9 @@ class ConexionBaseDatos():
         """
             Permite consultar todos los usuarios que pertenecen a un grupo
             determinado.
-
             Args:
                 grupo(Grupo): Objeto de tipo Grupo, del cual se obtiene
                     el nombre del grupo.
-
             Returns:
                 usuarios(list<string>): Lista que contiene los emails de los
                     usuarios pertenecientes al grupo.
@@ -129,11 +118,9 @@ class ConexionBaseDatos():
         """
             Esta funcion consulta el identificador único de un Usuario dentro
             de la base de datos neo4j.
-
             Args:
                 usuario(Usuario): Objeto de tipo Usuario, del cual se obtiene el
                     email.
-
             Returns:
                 Integer: Retorna el id del Usuario, en caso de error o de que
                     el usuario no exista retorna un (-1).
@@ -157,13 +144,11 @@ class ConexionBaseDatos():
             Verifica si un usuario es propietario de un grupo determinado, al
             consultar la propiedad Tipo de la relación EN_GRUPO. La propiedad
             debe ser P, lo que indica que el usuario es un propietario.
-
             Args:
                 usuario(Usuario): Objeto de tipo Usuario, del cual se obtiene el
                     email.
                 grupo(Grupo): Objeto de tipo Grupo, del cual se obtiene el
                     nombre.
-
             Returns:
                 boolean(True|False): Si determina que el Usuario es propietario
                     del grupo entonces retorna True, de lo contrario False.
@@ -183,17 +168,40 @@ class ConexionBaseDatos():
         except:
             return False
 
+    def consultar_enviados_usuario(self, usuario, grupo):
+        id_usr = "usr" + str(self.consultar_id_usuario(usuario))
+        lista_usr = self.consultar_usuarios_grupo(grupo)
+        id_usr2 = ""
+        user_tmp = None
+        datos = []
+
+        for it in lista_usr:
+            if it.email != usuario.get_email():
+                user_tmp = Usuario(it.email)
+                id_usr2 = "usr" + str(self.consultar_id_usuario(user_tmp))
+
+                consulta = ("MATCH (u:Usuario{email:{E}}), (u2:Usuario{email:{E2}}),"
+                    "(u)-[r:COM]-(u2) RETURN u2.email AS email, r." + id_usr2 +
+                    " AS env, r." + id_usr + " AS rec")
+                try:
+                    res = self.graph.cypher.execute(consulta, {'E': usuario.get_email(),
+                            'E2': it.email})
+
+                    datos.append((res[0].email, res[0].env, res[0].rec))
+                except:
+                    return -1
+
+        return datos
+
     def crear_grupo(self, grupo, usuario):
         """
             Crea un grupo nuevo e inmediatamente relaciona al usuario de la
             sesión activa como propietario del grupo.
-
             Args:
                 grupo(Grupo): Objeto de tipo Grupo, del cual se obtiene
                     el nombre del grupo.
                 usuario(Usuario): Objeto de tipo Usuario, del cual se obtiene
                     el email del usuario.
-
             Returns:
                 boolean: True, en caso de que el grupo sea creado con éxito.
                          False, en caso de que el grupo no sea creado.
@@ -210,11 +218,9 @@ class ConexionBaseDatos():
     def crear_usuario(self, usuario):
         """
             Crea un nuevo usuario dentro de la base de datos.
-
             Args:
                 usuario(Usuario): Objeto de tipo Usuario, del cual se obtienen
                     c/u de los datos, accediendo a los atributos del mismo.
-
             Returns:
                 boolean: True, creación exitosa.
                          False, no se completa la operación.
@@ -234,7 +240,6 @@ class ConexionBaseDatos():
             Permite crear la relación de un usuario determinado con un grupo
             específico. La relación se nombra EN_GRUPO y contiene el atributo
             tipo: P|M , que toma los valores P:Propietario ó M:Miembro.
-
             Args:
                 usuario(Usuario): Objeto de tipo Usuario, del cual se obtienen
                     c/u de los datos, accediendo a los atributos del mismo.
@@ -242,7 +247,6 @@ class ConexionBaseDatos():
                     el nombre del grupo.
                 tipo(string): Específica el tipo de relación con el grupo,
                     P: Propietario ó M: Miembro.
-
             Returns:
                 boolean: True, creación exitosa.
                          False, no se completa la operación.
@@ -278,13 +282,11 @@ class ConexionBaseDatos():
         """
             Permite la actualización de la propiedad del usuario relativa al
             ultimo_acceso llevado a cabo por el usuario en la aplicación.
-
             Args:
                 usuario(Usuario): Objeto de tipo Usuario, del cual se obtiene
                     el email y se actualiza la propiedad ultimo_acceso.
                 ultimo_acceso(string): Hace referencia a la fecha del ultimo
                     acceso a la aplicación. Toma el formato AAAA/MM/DD.
-
             Returns:
                 boolean: True, actualización exitosa.
                          False, no se completa la operación.
@@ -301,13 +303,11 @@ class ConexionBaseDatos():
         """
             Permite la actualización de la propiedad del usuario relativa a la
             cantidad de emails en su cuenta de correo de Gmail.
-
             Args:
                 usuario(Usuario): Objeto de tipo Usuario, del cual se obtiene
                     el email y se actualiza la propiedad total_emails.
                 total_emails(integer): Número Entero, hace referencia al total
                     de emails en la cuenta de Gmail.
-
             Returns:
                 boolean: True, actualización exitosa.
                          False, no se completa la operación.
@@ -330,11 +330,10 @@ class ConexionBaseDatos():
 
         if usuario_tmp is None:
             self.crear_usuario(nuevo_usuario)
-            return True
         else:
             for it in lista_emails:
                 if it.email == usuario_tmp.get_email():
-                    return False
+                    return
 
         self.crear_rel_usuario_grupo(nuevo_usuario, grupo, "M")
 
@@ -363,6 +362,15 @@ class ConexionBaseDatos():
         except:
             return False
 
+    def eliminar_grupo(self, grupo):
+        consulta = ("MATCH (g:Grupo{nombre:{N}}) DELETE g")
+
+        try:
+            self.graph.cypher.execute(consulta, {'N': grupo.get_nombre()})
+            return True
+        except:
+            return False
+
     def guardar_enviados_usuario(self, usuario, grupo, gmail_service):
         id_usr = ""  # Var. id usuario, destinatario emails
         lista_usr_grp = self.consultar_usuarios_grupo(grupo)  # Lista usuarios grupo
@@ -370,20 +378,22 @@ class ConexionBaseDatos():
         gmail_api = GmailAPI()    # Objeto de tipo GmailAPI
         query = ""  # Variable Temporal consulta a gmail api
         total = 0  # Var. guarda el total enviados a un usuario
-        fecha = dt.datetime.now().strftime("%Y/%m/%d")
+        #fecha = dt.datetime.now().strftime("%Y/%m/%d")
 
         for it in lista_usr_grp:
             if usuario.get_email() != it.email:
-                query = 'to:' + it.email + ' after:' + ultimo_acceso
-                print (query)
+                #query = 'to:' + it.email + ' after:' + ultimo_acceso
+                #query = str('to:' + it.email)
+                query = str('in:sent ' + it.email)
                 usr_tmp = Usuario(email=it.email)    # Usuario Temporal
                 id_usr = "usr" + str(self.consultar_id_usuario(usr_tmp))
-                emails_sent = gmail_api.ListMessagesMatchingQuery(gmail_service,'me', query)
+                emails_sent = gmail_api.ListMessagesMatchingQuery(gmail_service,
+                        'me', query)
                 total = len(emails_sent)
 
                 # Consulta para guardar en la base de datos
                 consulta = ("MATCH (u:Usuario{email:{E}}), (u2:Usuario{email:{E2}}),"
-                    "(u)-[r:COM]-(u2) SET r." + id_usr + "=r." + id_usr + "+{T}")
+                    "(u)-[r:COM]-(u2) SET r." + id_usr + "={T}")
 
                 self.graph.cypher.execute(consulta, {'E': usuario.get_email(),
                         'E2': it.email, 'T': total})
