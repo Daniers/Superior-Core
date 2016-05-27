@@ -362,6 +362,15 @@ class ConexionBaseDatos():
         except:
             return False
 
+    def eliminar_grupo(self, grupo):
+        consulta = ("MATCH (g:Grupo{nombre:{N}}) DELETE g")
+
+        try:
+            self.graph.cypher.execute(consulta, {'N': grupo.get_nombre()})
+            return True
+        except:
+            return False
+
     def guardar_enviados_usuario(self, usuario, grupo, gmail_service):
         id_usr = ""  # Var. id usuario, destinatario emails
         lista_usr_grp = self.consultar_usuarios_grupo(grupo)  # Lista usuarios grupo

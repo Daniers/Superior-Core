@@ -10,7 +10,7 @@ import networkx as nx
 class Graficos():
 
     def __init__(self):
-        super(Graficas, self).__init__()
+        super(Graficos, self).__init__()
 
     def DiagramaDeBarras(lista):
 
