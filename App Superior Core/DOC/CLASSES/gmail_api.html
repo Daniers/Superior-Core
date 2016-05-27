@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module gmail_api</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>gmail_api</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/asleon/RepoIs/Superior-Core/App%20Superior%20Core/CLASSES/gmail_api.py">/home/asleon/RepoIs/Superior-Core/App Superior Core/CLASSES/gmail_api.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;-*-&nbsp;coding:&nbsp;utf-8&nbsp;-*-</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="googleapiclient.errors.html">googleapiclient.errors</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="gmail_api.html#GmailAPI">GmailAPI</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="GmailAPI">class <strong>GmailAPI</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="GmailAPI-ListMessagesMatchingQuery"><strong>ListMessagesMatchingQuery</strong></a>(self, service, user_id, query='')</dt><dd><tt>List&nbsp;all&nbsp;Messages&nbsp;of&nbsp;the&nbsp;user's&nbsp;mailbox&nbsp;matching&nbsp;the&nbsp;query.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;service:&nbsp;Authorized&nbsp;Gmail&nbsp;API&nbsp;service&nbsp;instance.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;user_id:&nbsp;User's&nbsp;email&nbsp;address.&nbsp;The&nbsp;special&nbsp;value&nbsp;"me"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;can&nbsp;be&nbsp;used&nbsp;to&nbsp;indicate&nbsp;the&nbsp;authenticated&nbsp;user.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;query:&nbsp;String&nbsp;used&nbsp;to&nbsp;filter&nbsp;messages&nbsp;returned.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Eg.-&nbsp;'from:user@some_domain.com'&nbsp;for&nbsp;Messages&nbsp;from&nbsp;a&nbsp;particular&nbsp;sender.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;List&nbsp;of&nbsp;Messages&nbsp;that&nbsp;match&nbsp;the&nbsp;criteria&nbsp;of&nbsp;the&nbsp;query.&nbsp;Note&nbsp;that&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;returned&nbsp;list&nbsp;contains&nbsp;Message&nbsp;IDs,&nbsp;you&nbsp;must&nbsp;use&nbsp;get&nbsp;with&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;appropriate&nbsp;ID&nbsp;to&nbsp;get&nbsp;the&nbsp;details&nbsp;of&nbsp;a&nbsp;Message.</tt></dd></dl>
+
+<dl><dt><a name="GmailAPI-__init__"><strong>__init__</strong></a>(self)</dt></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
