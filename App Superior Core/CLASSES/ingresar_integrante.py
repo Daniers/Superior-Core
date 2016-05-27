@@ -32,6 +32,7 @@ class IngresarIntegrante(QtGui.QDialog):
         if ok is None:
             QtGui.QMessageBox.warning(self, 'informacion', 'El Integrante se ha'
             ' ingresado exitosamente.')
+            self.ingreso.hide()
         else:
             QtGui.QMessageBox.warning(self, 'Error', ' El correo ya existe, intentelo'
             ' de nuevo.')

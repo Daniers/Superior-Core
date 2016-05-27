@@ -82,7 +82,7 @@ class InformacionGrupo(QtGui.QDialog):
         self.llenar_datos_grupo()
 
     def Diagrama_barras(self):
-        barras=Usuario(email=self.item_integrante,ultimo_acceso="", total_emails=0)
+        barras=Usuario(email=self.usuario_actual,ultimo_acceso="", total_emails=0)
         aux = self.conexionDB.consultar_enviados_usuario(barras,self.grupo_actual)
         m=Graficos.DiagramaDeBarras(aux)
 
@@ -94,6 +94,7 @@ class InformacionGrupo(QtGui.QDialog):
     def Recibidos(self):
         recibidos=Usuario(email=self.item_integrante,ultimo_acceso="", total_emails=0)
         aux = self.conexionDB.consultar_enviados_usuario(recibidos,self.grupo_actual)
+        print(aux)
         m=Graficos.graficaRecibidos(aux)
 
 
