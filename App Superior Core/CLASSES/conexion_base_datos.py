@@ -26,9 +26,9 @@ class ConexionBaseDatos():
     """
     def __init__(self):
         super(ConexionBaseDatos, self).__init__()
-        authenticate(PATH_BASE_DATOS, USUARIO, PASS)    # Solo en local autenticación
-        #self.graph = Graph(PATH_BASE_DATOS)       # nube
-        self.graph = Graph()
+        #authenticate(PATH_BASE_DATOS, USUARIO, PASS)    # Solo en local autenticación
+        self.graph = Graph(PATH_BASE_DATOS)       # nube
+        #self.graph = Graph()
 
     def consultar_grupo(self, grupo):
         """
