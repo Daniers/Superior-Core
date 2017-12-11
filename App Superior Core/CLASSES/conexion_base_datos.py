@@ -8,7 +8,8 @@ import datetime as dt
 
 # Ruta a Base de Datos
 #PATH_BASE_DATOS = "http://superiorcore:71ZRUSThCdIOO5MYikj1@superiorcore.sb02.stations.graphenedb.com:24789/db/data/"
-PATH_BASE_DATOS = "localhost:7474"
+#PATH_BASE_DATOS = "localhost:7474"
+PATH_BASE_DATOS = "192.168.1.1:7474"
 USUARIO = "neo4j"
 #PASS = "admin_neo"
 PASS = "neo1234"
